@@ -1,0 +1,26 @@
+﻿self.limpiar = function () {
+    self.idaipinsenc(0);
+    self.itipoinsenc("");
+    self.idsegmanusu(0);
+    self.xcedula("");
+    self.xnombres("");
+    self.xapellidos("");
+    self.xnombrecompleto("");
+    self.xcedpropinsenc("");
+    self.xcedsidoinsenc("");
+    self.xplacinsenc("");
+    self.xsermotinsenc("");
+    self.xsercarrinsenc("");
+    self.xnumpolinsenc("");
+    self.xnumsininsenc("");
+    self.xllavinsenc("");
+    self.fcreainsenc("");
+    self.fprocinsenc("");
+    self.faudinsenc("");
+    self.fultrechinsenc("");
+    self.fcancinsenc("");
+    self.facepinsenc("");
+    self.xdescinsenc("");
+    self.iestatinsenc("");
+    self.idseglogreg(0);
+}

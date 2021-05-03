@@ -1,0 +1,26 @@
+﻿var vi_aipinslimsinrepu = function (campos_requeridos) {
+    var self = this;
+    self.idaipinslimsinrepu = ko.observable(0);
+    self.comboinslimsinrepu = ko.observableArray();
+    self.idaipinslimsin = ko.observable(0);
+    self.comboinslimsin = ko.observableArray();
+    self.idaipinsenc = ko.observable(0);
+    self.comboinsenc = ko.observableArray();
+    self.itipoinsenc = ko.observable("");
+    self.combotipoinsenc = ko.observableArray();
+    self.idaipbarerepu = ko.observable(0);
+    self.combobarerepu = ko.observableArray();
+    self.idaipmanrepu = ko.observable(0);
+    self.combomanrepu = ko.observableArray();
+    self.xnommanrepu = ko.observable("");
+    self.faplibarerepu = ko.observable("");
+    self.iorigbarerepu = ko.observable("");
+    self.comboorigbarerepu = ko.observableArray();
+    self.mcostbarerepu = ko.observable(0);
+    self.ncantinslimsinrepu = ko.observable(0);
+    self.nprecfininslimsinrepu = ko.observable(0);
+    self.xdescinslimsinrepu = ko.observable("");
+    self.iestatinslimsinrepu = ko.observable("");
+    self.comboestatinslimsinrepu = ko.observableArray();
+    self.idseglogreg = ko.observable(0);
+}

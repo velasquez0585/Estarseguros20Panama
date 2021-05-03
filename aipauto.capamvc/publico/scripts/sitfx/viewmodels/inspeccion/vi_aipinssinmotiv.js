@@ -1,0 +1,20 @@
+﻿var vi_aipinssinmotiv = function (campos_requeridos) {
+    var self = this;
+    self.idaipinssinmotiv = ko.observable(0);
+    self.comboinssinmotiv = ko.observableArray();
+    self.idaipinssin = ko.observable(0);
+    self.comboinssin = ko.observableArray();
+    self.idaipinsenc = ko.observable(0);
+    self.comboinsenc = ko.observableArray();
+    self.itipoinsenc = ko.observable("");
+    self.combotipoinsenc = ko.observableArray();
+    self.idaipinsmotiv = ko.observable(0);
+    self.comboinsmotiv = ko.observableArray();
+    self.xnominsmotiv = ko.observable("");
+    self.itipoinsmotiv = ko.observable("");
+    self.combotipoinsmotiv = ko.observableArray();
+    self.iestatinsmotiv = ko.observable("");
+    self.comboestatinsmotiv = ko.observableArray();
+    self.itilinssinmotiv = ko.observable(false);
+    self.idseglogreg = ko.observable(0);
+}

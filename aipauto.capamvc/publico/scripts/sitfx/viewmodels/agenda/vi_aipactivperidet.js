@@ -1,0 +1,26 @@
+﻿var vi_aipactivperidet = function (campos_requeridos) {
+    var self = this;
+    self.idsegmanusucreaactivperi = ko.observable(0);
+    self.combomanusucreaactivperi = ko.observableArray();
+    self.xnombrecompletocrea = ko.observable("");
+    self.idaipactivperi = ko.observable(0);
+    self.comboactivperi = ko.observableArray();
+    self.fejecactivperi = ko.observable("");
+    self.xtituactivperi = ko.observable("");
+    self.ialcanactivperi = ko.observable("");
+    self.comboalcanactivperi = ko.observableArray();
+    self.iestatactivperi = ko.observable("");
+    self.comboestatactivperi = ko.observableArray();
+    self.ffinejecactivperi = ko.observable("");
+    self.idsegmanusu = ko.observable(0);
+    self.combomanusu = ko.observableArray();
+    self.xnombrecompletoperito = ko.observable("");
+    self.xcoloractivperi = ko.observable("");
+    self.xnomcliactivperi = ko.observable("");
+    self.xcidaseactivperi = ko.observable("");
+    self.xsermotactivperi = ko.observable("");
+    self.xsercarractivperi = ko.observable("");
+    self.xplacaactivperi = ko.observable("");
+    self.xtelfmovilactivperi = ko.observable("");
+    self.xcorreoelectronico1 = ko.observable("");
+}

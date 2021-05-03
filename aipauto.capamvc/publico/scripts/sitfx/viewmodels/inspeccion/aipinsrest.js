@@ -1,0 +1,27 @@
+﻿var aipinsrest = function (campos_requeridos) {
+    var self = this;
+    self.idaipinsrest = ko.observable(0);
+    self.idaipinsenc = ko.observable(0);
+    self.comboinsenc = ko.observableArray();
+    self.idaipmanveh = ko.observable(0);
+    self.combomanveh = ko.observableArray();
+    self.xsucuinsrest = ko.observable("");
+    self.nkiloinsrest = ko.observable(0);
+    self.idcomunmanestado = ko.observable(0);
+    self.combounmanestado = ko.observableArray();
+    self.idcomunmanlocalid = ko.observable(0);
+    self.combounmanlocalid = ko.observableArray();
+    self.xdirinsrest = ko.observable("");
+    self.msumaseginsrest = ko.observable(0);
+    self.msumaseg75insrest = ko.observable(0);
+    self.mvalinminsrest = ko.observable(0);
+    self.mdanoinsrest = ko.observable(0);
+    self.mavalinsrest = ko.observable(0);
+    self.xnomtalinsrest = ko.observable("");
+    self.xnomperinsrest = ko.observable("");
+    self.xnomjefperinsrest = ko.observable("");
+    self.xdescinsrest = ko.observable("");
+    self.iestatinsrest = ko.observable("");
+    self.comboestatinsrest = ko.observableArray();
+    self.idseglogreg = ko.observable(0);
+}

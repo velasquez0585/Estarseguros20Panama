@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED8A114F-9A75-4BCC-9904-7AFAC8856AFD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>estarseguros20.capaobjetos</RootNamespace>
+    <AssemblyName>estarseguros20.capaobjetos</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>estarseguros20.capaobjetos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>estarseguros20.capaobjetos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="modelo\aipauto\entidades\agenda\aipactivperi.vb" />
+    <Compile Include="modelo\aipauto\entidades\baremo\aipbaremobr.vb" />
+    <Compile Include="modelo\aipauto\entidades\baremo\aipbarerepu.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsajusanex.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsajusanexmobr.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsajusanexrepu.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsajussin.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsajussinmobr.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsajussinrepu.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsarch.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsenc.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsfoto.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinslimsin.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinslimsinmobr.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinslimsinrepu.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinslimsus.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinslimsusmobr.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinslimsusrepu.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsmotiv.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsrest.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsrestrepuest.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsrestsse.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinsrestssm.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssin.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssinmobr.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssinmotiv.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssinrepu.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssus.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssusacc.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssusinfcomp.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssusmotiv.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssusrepuest.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssussse.vb" />
+    <Compile Include="modelo\aipauto\entidades\inspeccion\aipinssusssm.vb" />
+    <Compile Include="modelo\aipauto\entidades\log\aiplogeve.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmandisp.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmaninfcomp.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmanrepu.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmanusuconf.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmanveh.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmanvehacc.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmanvehmar.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmanvehmod.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmanvehsse.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmanvehssm.vb" />
+    <Compile Include="modelo\aipauto\entidades\mantenimiento\aipmanvehver.vb" />
+    <Compile Include="modelo\aipauto\entidades\usuario\aipusudisp.vb" />
+    <Compile Include="modelo\aipauto\vistas\agenda\vi_aipactivperi.vb" />
+    <Compile Include="modelo\aipauto\vistas\agenda\vi_aipactivperidet.vb" />
+    <Compile Include="modelo\aipauto\vistas\baremo\vi_aipbaremobr.vb" />
+    <Compile Include="modelo\aipauto\vistas\baremo\vi_aipbarerepu.vb" />
+    <Compile Include="modelo\aipauto\vistas\baremo\vi_comboaipbaremobrmater.vb" />
+    <Compile Include="modelo\aipauto\vistas\baremo\vi_comboaipbaremobrmobr.vb" />
+    <Compile Include="modelo\aipauto\vistas\baremo\vi_comboaipbaremobrtama.vb" />
+    <Compile Include="modelo\aipauto\vistas\baremo\vi_comboaipbarerepuorig.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipextsintagenda.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsajusanex.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsajusanexmobr.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsajusanexmobragrup.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsajusanexrepu.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsajussin.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsajussinmobr.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsajussinmobragrup.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsajussinrepu.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsarch.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsauditagrup.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsdistaudit.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsdistauditdet.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsdistauditperf.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsdistperit.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsdistperitdet.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsdistperitperf.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsenc.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsencdet.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsfoto.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinslimsin.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinslimsinmobr.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinslimsinrepu.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinslimsus.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinslimsusmobr.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinslimsusrepu.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsperitagrup.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsrest.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsrestrepuest.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsrestsse.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinsrestssm.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssin.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssinmobr.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssinmotiv.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssinrepu.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssus.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssusacc.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssusinfcomp.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssusmotiv.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssusrepuest.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssussse.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_aipinssusssm.vb" />
+    <Compile Include="modelo\aipauto\vistas\inspeccion\vi_intermediacion.vb" />
+    <Compile Include="modelo\aipauto\vistas\log\vi_aiplogeve.vb" />
+    <Compile Include="modelo\aipauto\vistas\mantenimiento\vi_aipmanrepu.vb" />
+    <Compile Include="modelo\aipauto\vistas\mantenimiento\vi_aipmanusuconf.vb" />
+    <Compile Include="modelo\aipauto\vistas\mantenimiento\vi_aipmanusuconfperf.vb" />
+    <Compile Include="modelo\aipauto\vistas\mantenimiento\vi_aipmanveh.vb" />
+    <Compile Include="modelo\aipauto\vistas\mantenimiento\vi_aipmanvehmod.vb" />
+    <Compile Include="modelo\aipauto\vistas\mantenimiento\vi_aipmanvehver.vb" />
+    <Compile Include="modelo\aipauto\vistas\usuario\vi_aipusudisp.vb" />
+    <Compile Include="modelo\comun\entidades\configuracion\comunconfcontad.vb" />
+    <Compile Include="modelo\comun\entidades\configuracion\comunconfsmtp.vb" />
+    <Compile Include="modelo\comun\entidades\configuracion\comunconfvalor.vb" />
+    <Compile Include="modelo\comun\entidades\mantenimiento\comunmancom.vb" />
+    <Compile Include="modelo\comun\entidades\mantenimiento\comunmancont.vb" />
+    <Compile Include="modelo\comun\entidades\mantenimiento\comunmandir.vb" />
+    <Compile Include="modelo\comun\entidades\mantenimiento\comunmanempr.vb" />
+    <Compile Include="modelo\comun\entidades\mantenimiento\comunmanestado.vb" />
+    <Compile Include="modelo\comun\entidades\mantenimiento\comunmanlocalid.vb" />
+    <Compile Include="modelo\comun\entidades\mantenimiento\comunmanpais.vb" />
+    <Compile Include="modelo\comun\entidades\mantenimiento\comunmanpers.vb" />
+    <Compile Include="modelo\personalizados\agendamovil.vb" />
+    <Compile Include="modelo\personalizados\aipgenobj.vb" />
+    <Compile Include="modelo\personalizados\aipinstotalpers.vb" />
+    <Compile Include="modelo\personalizados\Android.vb" />
+    <Compile Include="modelo\personalizados\baremobrmasivo.vb" />
+    <Compile Include="modelo\personalizados\barerepumasivo.vb" />
+    <Compile Include="modelo\personalizados\datosfoto.vb" />
+    <Compile Include="modelo\personalizados\DownloadFilesResult.vb" />
+    <Compile Include="modelo\personalizados\DownloadFilesResultInsFoto.vb" />
+    <Compile Include="modelo\personalizados\eventos.vb" />
+    <Compile Include="modelo\personalizados\paginacion.vb" />
+    <Compile Include="modelo\personalizados\peraipdatosdeclara.vb" />
+    <Compile Include="modelo\personalizados\persaipinssini.vb" />
+    <Compile Include="modelo\personalizados\persaipinssinicotiz.vb" />
+    <Compile Include="modelo\personalizados\respopera.vb" />
+    <Compile Include="modelo\personalizados\respoperaavz.vb" />
+    <Compile Include="modelo\personalizados\sinmanvehmovil.vb" />
+    <Compile Include="modelo\personalizados\susmanvehmovil.vb" />
+    <Compile Include="modelo\personalizados\UploadFilesResult.vb" />
+    <Compile Include="modelo\seginsoft\entidades\seguridad\segmancarg.vb" />
+    <Compile Include="modelo\seginsoft\entidades\seguridad\segmandep.vb" />
+    <Compile Include="modelo\seginsoft\entidades\seguridad\segmanusu.vb" />
+    <Compile Include="modelo\seginsoft\entidades\trazabilidad\seglogerr.vb" />
+    <Compile Include="modelo\seginsoft\vistas\seguridad\vi_combosegmanorg.vb" />
+    <Compile Include="modelo\seginsoft\vistas\seguridad\vi_segaccperf.vb" />
+    <Compile Include="modelo\seginsoft\vistas\seguridad\vi_segappperf.vb" />
+    <Compile Include="modelo\seginsoft\vistas\seguridad\vi_segappprog.vb" />
+    <Compile Include="modelo\seginsoft\vistas\seguridad\vi_segmanusu.vb" />
+    <Compile Include="modelo\seginsoft\vistas\seguridad\vi_segusudetperf2.vb" />
+    <Compile Include="modelo\seginsoft\vistas\seguridad\vi_segusuperf.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="modelo\comun\vistas\" />
+    <Folder Include="modelo\seginsoft\vistas\trazabilidad\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

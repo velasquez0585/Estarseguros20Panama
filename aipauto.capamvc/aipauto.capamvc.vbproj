@@ -1,0 +1,1932 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A28C96EE-ECE2-45A2-BCB3-6D631FD217AD}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>aipauto.capamvc</RootNamespace>
+    <AssemblyName>aipauto.capamvc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>aipauto.capamvc.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>aipauto.capamvc.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.vb" />
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\FilterConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Controllers\AgendaController.vb" />
+    <Compile Include="Controllers\BaremoController.vb" />
+    <Compile Include="Controllers\BaseController.vb" />
+    <Compile Include="Controllers\ComunController.vb" />
+    <Compile Include="Controllers\ErrorController.vb" />
+    <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Controllers\InspeccionController.vb" />
+    <Compile Include="Controllers\LogController.vb" />
+    <Compile Include="Controllers\MantenimientoController.vb" />
+    <Compile Include="Controllers\SeguridadController.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ErrorModel.vb" />
+    <Compile Include="Models\InfoModel.vb" />
+    <Compile Include="Models\PaginacionModel.vb" />
+    <Compile Include="Models\SeguridadModel.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="sobreescritura\atributos\CustomAuthorizeAttribute.vb" />
+    <Compile Include="sobreescritura\atributos\FileDownloadAttribute.vb" />
+    <Compile Include="sobreescritura\atributos\SetCultureAttribute.vb" />
+    <Compile Include="sobreescritura\reciclaje\CustomRoleProvider.vb" />
+    <Compile Include="sobreescritura\reciclaje\InitializeSimpleMembershipAttribute.vb" />
+    <Compile Include="sobreescritura\reciclaje\NotAuthorizeException.vb" />
+    <Compile Include="sobreescritura\viewengine\PartialViewEngine.vb" />
+    <Compile Include="sobreescritura\viewresult\LocalizedPartialViewResult.vb" />
+    <Compile Include="sobreescritura\viewresult\LocalizedViewResult.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\admpremium.capamvc.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="App_Data\leeme.txt" />
+    <Content Include="img\back.jpg" />
+    <Content Include="img\browser-icons.png" />
+    <Content Include="img\close.png" />
+    <Content Include="img\d01.png" />
+    <Content Include="img\d02.png" />
+    <Content Include="img\d03.png" />
+    <Content Include="img\d06.png" />
+    <Content Include="img\d07.png" />
+    <Content Include="img\d08.png" />
+    <Content Include="img\d09.png" />
+    <Content Include="img\d10.png" />
+    <Content Include="img\d11.png" />
+    <Content Include="img\d12.png" />
+    <Content Include="img\d13.png" />
+    <Content Include="img\d14.png" />
+    <Content Include="img\d15.png" />
+    <Content Include="img\d16.png" />
+    <Content Include="img\d17.png" />
+    <Content Include="img\d19.png" />
+    <Content Include="img\d20.png" />
+    <Content Include="img\d21.png" />
+    <Content Include="img\Icon-Slider-11-jQuery.png" />
+    <Content Include="img\Icon-Slider-11-No-jQuery.png" />
+    <Content Include="img\Icon-Slider-12-jQuery.png" />
+    <Content Include="img\Icon-Slider-12-No-jQuery.png" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\loading2.gif" />
+    <Content Include="img\n02.png" />
+    <Content Include="img\n03.png" />
+    <Content Include="img\n05.png" />
+    <Content Include="img\n06.png" />
+    <Content Include="img\n07.png" />
+    <Content Include="img\n10.png" />
+    <Content Include="img\n11.png" />
+    <Content Include="img\n12.png" />
+    <Content Include="img\n13.png" />
+    <Content Include="img\n14.png" />
+    <Content Include="img\n16.png" />
+    <Content Include="img\n17.png" />
+    <Content Include="img\n18.png" />
+    <Content Include="img\n20.png" />
+    <Content Include="img\n21.png" />
+    <Content Include="img\play.png" />
+    <Content Include="img\prueba1.jpg" />
+    <Content Include="img\t01.png" />
+    <Content Include="packages.config" />
+    <Content Include="publico\css\custom-metro-purple-estarseguros.css" />
+    <Content Include="publico\css\custom-metro-purple-laregionalseguros.css" />
+    <Content Include="publico\css\custom-metro-purple.css" />
+    <Content Include="publico\css\errores.css" />
+    <Content Include="publico\css\mvcprincipal.css" />
+    <Content Include="publico\css\terceros\metro-ui\css\metro-bootstrap-responsive.css" />
+    <Content Include="publico\css\terceros\metro-ui\css\metro-bootstrap.css" />
+    <Content Include="publico\css\terceros\metro-ui\fonts\iconFont.dev.svg" />
+    <Content Include="publico\css\terceros\metro-ui\fonts\iconFont.eot" />
+    <Content Include="publico\css\terceros\metro-ui\fonts\iconFont.json" />
+    <Content Include="publico\css\terceros\metro-ui\fonts\iconFont.svg" />
+    <Content Include="publico\css\terceros\metro-ui\fonts\iconFont.ttf" />
+    <Content Include="publico\css\terceros\metro-ui\fonts\iconFont.woff" />
+    <Content Include="publico\css\terceros\scrolltopbottom.css" />
+    <Content Include="publico\imagenes\audio-iniciar.jpg" />
+    <Content Include="publico\imagenes\audio-no-disponible.jpg" />
+    <Content Include="publico\imagenes\delete.png" />
+    <Content Include="publico\imagenes\hollow-pin-blue.png" />
+    <Content Include="publico\imagenes\imagenes_movil\img_no_disponible.jpg" />
+    <Content Include="publico\imagenes\imagenes_movil\zoom\leeme.txt" />
+    <Content Include="publico\imagenes\img_no_disponible.jpg" />
+    <Content Include="publico\imagenes\mvcprincipal\accent.png" />
+    <Content Include="publico\imagenes\mvcprincipal\aspNetHome.png" />
+    <Content Include="publico\imagenes\mvcprincipal\bullet.png" />
+    <Content Include="publico\imagenes\mvcprincipal\facebook.png" />
+    <Content Include="publico\imagenes\mvcprincipal\findHosting.png" />
+    <Content Include="publico\imagenes\mvcprincipal\heroAccent.png" />
+    <Content Include="publico\imagenes\mvcprincipal\NuGetGallery.png" />
+    <Content Include="publico\imagenes\mvcprincipal\orderedListOne.png" />
+    <Content Include="publico\imagenes\mvcprincipal\orderedListThree.png" />
+    <Content Include="publico\imagenes\mvcprincipal\orderedListTwo.png" />
+    <Content Include="publico\imagenes\mvcprincipal\twitter.png" />
+    <Content Include="publico\imagenes\mvcprincipal\windowsLive.png" />
+    <Content Include="publico\imagenes\rotate_der.png" />
+    <Content Include="publico\imagenes\rotate_izq.png" />
+    <Content Include="publico\imagenes\sitfx\agenda.png" />
+    <Content Include="publico\imagenes\sitfx\agenda_op.png" />
+    <Content Include="publico\imagenes\sitfx\barra.png" />
+    <Content Include="publico\imagenes\sitfx\barras.png" />
+    <Content Include="publico\imagenes\sitfx\check.png" />
+    <Content Include="publico\imagenes\sitfx\fav.ico" />
+    <Content Include="publico\imagenes\sitfx\fondo1.png" />
+    <Content Include="publico\imagenes\sitfx\fondo_sitfx.png" />
+    <Content Include="publico\imagenes\sitfx\fondo_sitfx1.png" />
+    <Content Include="publico\imagenes\sitfx\fondo_sitfx2.png" />
+    <Content Include="publico\imagenes\sitfx\health32x32.png" />
+    <Content Include="publico\imagenes\sitfx\Info.png" />
+    <Content Include="publico\imagenes\sitfx\logoaipauto.png" />
+    <Content Include="publico\imagenes\sitfx\logoaipauto2.png" />
+    <Content Include="publico\imagenes\sitfx\logositfx.png" />
+    <Content Include="publico\imagenes\sitfx\sigma_dental.png" />
+    <Content Include="publico\imagenes\solid-pin-black.png" />
+    <Content Include="publico\imagenes\solid-pin-orange.png" />
+    <Content Include="publico\imagenes\solid-pin-red.png" />
+    <Content Include="publico\imagenes\terceros\arrow_down.png" />
+    <Content Include="publico\imagenes\terceros\arrow_up.png" />
+    <Content Include="publico\imagenes\terceros\loading1.gif" />
+    <Content Include="publico\imagenes\video-iniciar.jpg" />
+    <Content Include="publico\imagenes\video-no-disponible-min.jpg" />
+    <Content Include="publico\imagenes\video-no-disponible.jpg" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\changelog.txt" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\agenda-views.html" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\basic-views.html" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\cupertino\jquery-ui.min.css" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\default.html" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\external-dragging.html" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\gcal.html" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\json.html" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\selectable.html" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\theme.html" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\fullcalendar\fullcalendar.css" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\fullcalendar\fullcalendar.js" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\fullcalendar\fullcalendar.min.js" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\fullcalendar\fullcalendar.print.css" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\fullcalendar\gcal.js" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\lib\jquery-ui.custom.min.js" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\lib\jquery.min.js" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\license.txt" />
+    <Content Include="publico\scripts\mvcprincipal\jquery-1.7.1.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery-1.7.1.min.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery-2.0.3.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery-2.0.3.min.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery-2.0.3.min.map" />
+    <Content Include="publico\scripts\mvcprincipal\jquery-ui-1.10.3.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery-ui-1.10.3.min.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery-ui-1.8.20.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery-ui-1.8.20.min.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery.unobtrusive-ajax.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery.validate.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery.validate.min.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery.validate.unobtrusive.js" />
+    <Content Include="publico\scripts\mvcprincipal\jquery.validate.unobtrusive.min.js" />
+    <Content Include="publico\scripts\mvcprincipal\knockout-2.1.0.debug.js" />
+    <Content Include="publico\scripts\mvcprincipal\knockout-2.1.0.js" />
+    <Content Include="publico\scripts\mvcprincipal\knockout-3.0.0.debug.js" />
+    <Content Include="publico\scripts\mvcprincipal\knockout-3.0.0.js" />
+    <Content Include="publico\scripts\mvcprincipal\modernizr-2.5.3.js" />
+    <Content Include="publico\scripts\mvcprincipal\modernizr-2.7.1.js" />
+    <Content Include="publico\scripts\mvcprincipal\_references.js" />
+    <Content Include="publico\scripts\sitfx\funciones_ajax.js" />
+    <Content Include="publico\scripts\sitfx\funciones_generales.js" />
+    <Content Include="publico\scripts\sitfx\funciones_jqueryui.js" />
+    <Content Include="publico\scripts\sitfx\funciones_knockout.js" />
+    <Content Include="publico\scripts\sitfx\funciones_noty.js" />
+    <Content Include="publico\scripts\sitfx\funciones_scrollscreen.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\agenda\aipactivperi.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\agenda\vi_aipactivperi.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\agenda\vi_aipactivperidet.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\aipbaremobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\aipbaremobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\aipbarerepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\aipbarerepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\baremobrmasivo.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\barerepumasivo.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_aipbaremobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_aipbaremobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_aipbarerepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_aipbarerepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_comboaipbaremobrmater.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_comboaipbaremobrmater_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_comboaipbaremobrmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_comboaipbaremobrmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_comboaipbaremobrtama.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_comboaipbaremobrtama_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_comboaipbarerepuorig.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\baremo\vi_comboaipbarerepuorig_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajusanex.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajusanexmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajusanexmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajusanexrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajusanexrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajusanex_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajussin.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajussinmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajussinmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajussinrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajussinrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsajussin_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsenc.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsenc_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsfoto.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsfoto_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsin.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsinmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsinmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsinrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsinrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsin_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsus.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsusmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsusmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsusrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsusrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinslimsus_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsmotiv.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsmotiv_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsrest.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsrestrepuest.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsrestrepuest_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsrestsse.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsrestsse_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsrestssm.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsrestssm_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinsrest_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssin.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssinmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssinmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssinmotiv.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssinmotiv_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssinrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssinrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssin_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssus.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusacc.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusacc_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusinfcomp.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusinfcomp_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusmotiv.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusmotiv_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusrepuest.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusrepuest_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssussse.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssussse_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusssm.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssusssm_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinssus_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\aipinstotalpers.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\peraipdatosdeclara.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\persaipinssini.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajusanex.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajusanexmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajusanexmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajusanexrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajusanexrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajusanex_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajussin.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajussinmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajussinmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajussinrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajussinrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsajussin_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsauditagrup.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsauditagrup_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsenc.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsenc_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsfoto.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsin.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsinmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsinmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsinrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsinrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsin_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsus.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsusmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsusmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsusrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsusrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinslimsus_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsperitagrup.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsperitagrup_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsrest.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsrestrepuest.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsrestrepuest_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsrestsse.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsrestsse_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsrestssm.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsrestssm_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinsrest_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssin.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssinmobr.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssinmobr_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssinmotiv.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssinmotiv_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssinrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssinrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssin_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssus.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssusacc.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssusacc_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssusmotiv.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssusmotiv_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssusrepuest.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssusrepuest_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssussse.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssussse_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssusssm.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssusssm_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_aipinssus_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\inspeccion\vi_intermediacion.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\log\aiplogeve.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\log\aiplogeve_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\log\vi_aiplogeve.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\log\vi_aiplogeve_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmandisp.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmandisp_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmaninfcomp.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmaninfcomp_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanveh.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehacc.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehacc_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehmar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehmar_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehmod.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehmod_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehsse.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehsse_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehssm.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehssm_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehver.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanvehver_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\aipmanveh_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\vi_aipmanrepu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\vi_aipmanrepu_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\vi_aipmanveh.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\vi_aipmanvehmod.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\vi_aipmanvehmod_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\vi_aipmanvehver.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\vi_aipmanvehver_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\vi_aipmanveh_limpiar.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\mantenimiento\vi_aipusudisp.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\paginacion.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\seguridad\vi_segmanusu.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\seguridad\vi_segusudetperf.js" />
+    <Content Include="publico\scripts\sitfx\viewmodels\seguridad\vi_segusudetperf2.js" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\images\bx_loader.gif" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\images\controls.png" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\jquery.bxslider.css" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\jquery.bxslider.js" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\jquery.bxslider.min.js" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\plugins\jquery.easing.1.3.js" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\plugins\jquery.fitvids.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\add-on\jplayer.playlist.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\add-on\jplayer.playlist.min.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\add-on\jquery.jplayer.inspector.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\add-on\jquery.jplayer.inspector.min.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\jplayer\jquery.jplayer.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\jplayer\jquery.jplayer.min.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\jplayer\jquery.jplayer.swf" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\popcorn\popcorn.jplayer.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\popcorn\popcorn.jplayer.min.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\css\jplayer.blue.monday.css" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\css\jplayer.blue.monday.min.css" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\image\jplayer.blue.monday.jpg" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\image\jplayer.blue.monday.seeking.gif" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\image\jplayer.blue.monday.video.play.png" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.audio.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.audio.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.audio.stream.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.video.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.video.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\css\jplayer.blue.monday.min.css" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\css\jplayer.estarseguros.css" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\image\jplayer.blue.monday.jpg" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\image\jplayer.blue.monday.seeking.gif" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\image\jplayer.blue.monday.video.play.png" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\mustache\jplayer.blue.monday.audio.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\mustache\jplayer.blue.monday.audio.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\mustache\jplayer.blue.monday.audio.stream.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\mustache\jplayer.blue.monday.video.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\estarseguros\mustache\jplayer.blue.monday.video.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\css\jplayer.pink.flag.css" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\css\jplayer.pink.flag.min.css" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\image\jplayer.pink.flag.jpg" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\image\jplayer.pink.flag.seeking.gif" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\image\jplayer.pink.flag.video.play.png" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.audio.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.audio.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.audio.stream.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.video.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.video.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-01-android.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-01-solution-flash-html.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-01-supplied-mp3.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-01-video-solution-flash-html.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-01-video-supplied-m4v.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-01-video-supplied-rtmpv.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-01-video.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-01.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-02-jPlayerPlaylist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-02-media-solution-flash-html.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-02-media.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-02-multi.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-02-video.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-02.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-03-together.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-03-video.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-03.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-08.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-09-popcorn-video-solution-flash-html.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\demo-09-popcorn-video.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\blue.monday\jPlayer-tester.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\other\demo-04.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\other\demo-05.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\other\demo-07.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-01-android.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-01-solution-flash-html.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-01-supplied-mp3.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-01-video-solution-flash-html.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-01-video-supplied-m4v.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-01-video-supplied-rtmpv.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-01-video.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-01.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-02-jPlayerPlaylist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-02-media-solution-flash-html.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-02-media.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-02-multi.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-02-video.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-02.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-03-together.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-03-video.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-03.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-08.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-09-popcorn-video-solution-flash-html.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\demo-09-popcorn-video.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\examples\pink.flag\jPlayer-tester.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\Gruntfile.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\aurora\aac.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\aurora\aurora.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\aurora\flac.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\aurora\mp3.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\aurora\ogg.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\aurora\opus.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\aurora\vorbis.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\js\circle.player.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\js\jquery.grab.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\js\jquery.transform2d.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\js\mod.csstransforms.min.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\skin\bgr.jpg" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\skin\buffer.png" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\skin\circle.player.css" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\skin\controls.jpg" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\skin\progress.png" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\circle-player\skin\progress_sprite.jpg" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\jquery.min.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\popcorn.ie8.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\popcorn.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\popcorn.player.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\popcorn.subtitle.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\MIT-LICENSE.txt" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\javascript\add-on\jplayer.playlist.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\javascript\add-on\jquery.jplayer.inspector.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\javascript\jplayer\jquery.jplayer.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\javascript\popcorn\popcorn.jplayer.js" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\blue.monday\image\jplayer.blue.monday.jpg" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\blue.monday\image\jplayer.blue.monday.seeking.gif" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\blue.monday\image\jplayer.blue.monday.video.play.png" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.audio.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.audio.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.audio.stream.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.video.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.video.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\estarseguros\image\jplayer.blue.monday.jpg" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\estarseguros\image\jplayer.blue.monday.seeking.gif" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\estarseguros\image\jplayer.blue.monday.video.play.png" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\estarseguros\mustache\jplayer.blue.monday.audio.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\estarseguros\mustache\jplayer.blue.monday.audio.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\estarseguros\mustache\jplayer.blue.monday.audio.stream.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\estarseguros\mustache\jplayer.blue.monday.video.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\estarseguros\mustache\jplayer.blue.monday.video.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\pink.flag\image\jplayer.pink.flag.jpg" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\pink.flag\image\jplayer.pink.flag.seeking.gif" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\pink.flag\image\jplayer.pink.flag.video.play.png" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.audio.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.audio.single.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.audio.stream.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.video.playlist.html" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.video.single.html" />
+    <Content Include="publico\scripts\terceros\jquery-1.9.1.js" />
+    <Content Include="publico\scripts\terceros\jquery.imageLens.js" />
+    <Content Include="publico\scripts\terceros\jquery.numeric.js" />
+    <Content Include="publico\scripts\terceros\jquery.tmpl.min.js" />
+    <Content Include="publico\scripts\terceros\jQueryRotate.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\.jshintrc" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery-ui-i18n.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-be.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-fr-CA.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ky.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-nb.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-nn.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery-ui-1.10.3.metro-purple.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery-ui-1.10.3.metro-purple.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery-ui.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.accordion.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.autocomplete.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.button.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.core.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.datepicker-es.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.datepicker.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.dialog.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.draggable.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.droppable.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-blind.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-bounce.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-clip.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-drop.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-explode.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-fade.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-fold.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-highlight.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-pulsate.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-scale.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-shake.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-slide.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect-transfer.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.effect.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.menu.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.mouse.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.position.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.progressbar.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.resizable.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.selectable.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.slider.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.sortable.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.spinner.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.tabs.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.tooltip.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\jquery.ui.widget.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-be.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-fr-CA.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ky.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-nb.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-nn.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery-ui.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.button.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.core.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.dialog.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-blind.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-bounce.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-clip.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-drop.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-explode.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-fade.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-fold.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-highlight.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-pulsate.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-scale.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-shake.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-slide.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect-transfer.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.effect.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.menu.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.position.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.slider.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.spinner.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.tabs.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.tooltip.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\minified\jquery.ui.widget.min.js" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.accordion.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.all.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.base.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.button.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.core.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.dialog.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.menu.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.resizable.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.selectable.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.slider.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.spinner.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.tabs.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-bg_diagonals-thick_8_333333_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-bg_glass_40_111111_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-bg_glass_55_1c1c1c_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-bg_highlight-hard_100_f9f9f9_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-bg_highlight-hard_40_aaaaaa_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-bg_highlight-soft_50_aaaaaa_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-bg_inset-hard_45_cd0a0a_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-bg_inset-hard_55_ffeb80_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-icons_222222_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-icons_4ca300_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-icons_ededed_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-icons_ffcf29_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\black-tie\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-icons_004276_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\blitzer\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\cupertino\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-bg_flat_100_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-bg_flat_45_29447E_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-bg_flat_50_3B5998_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-bg_flat_50_555555_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-bg_flat_60_3B5998_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-bg_flat_90_3B5998_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-bg_gloss-wave_70_3B5998_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-bg_inset-soft_50_ffffff_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-icons_29447E_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\jquery-ui-1.10.3.metro-purple.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\jquery-ui-1.10.3.metro-purple.estarseguros.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\jquery-ui-1.10.3.metro-purple.laregionalseguros.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\custom-metro-purple\jquery-ui-1.10.3.metro-purple.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-icons_222222_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-icons_a83300_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dark-hive\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-bg_dots-medium_30_0b58a2_4x4.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-bg_dots-small_20_333333_2x2.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-bg_dots-small_30_a32d00_2x2.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-bg_dots-small_40_00498f_2x2.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-bg_flat_40_292929_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-bg_gloss-wave_20_111111_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-icons_00498f_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-icons_98d2fb_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-icons_9ccdfc_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\dot-luv\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-bg_flat_55_994d53_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-bg_flat_55_fafafa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-bg_gloss-wave_30_3d3644_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-bg_highlight-soft_100_dcd9de_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-bg_highlight-soft_100_eae6ea_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-bg_highlight-soft_25_30273a_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-bg_highlight-soft_45_5f5964_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-icons_454545_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-icons_734d99_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-icons_8d78a5_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-icons_a8a3ae_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-icons_ebccce_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\eggplant\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-bg_diagonals-small_25_c5ddfc_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-bg_diagonals-thick_20_e69700_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-bg_diagonals-thick_22_1484e6_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-bg_diagonals-thick_26_2293f7_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-bg_flat_0_e69700_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-bg_flat_0_e6b900_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-bg_highlight-soft_100_f9f9f9_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-bg_inset-hard_100_eeeeee_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-icons_0a82eb_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-icons_0b54d5_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-icons_5fa5e3_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-icons_fcdd4a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\excite-bike\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-icons_454545_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-icons_666666_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\flick\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-bg_diagonals-small_40_db4865_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-bg_diagonals-small_50_93c3cd_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-bg_diagonals-small_50_ff3853_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-bg_diagonals-small_75_ccd232_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-bg_dots-medium_80_ffff38_4x4.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-bg_dots-small_35_35414f_2x2.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-bg_flat_75_ba9217_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-bg_white-lines_85_f7f7ba_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-icons_454545_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-icons_88a206_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-icons_c02669_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-icons_e1e463_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-icons_ffeb33_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\hot-sneaks\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-bg_glass_100_f5f0e5_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-bg_glass_25_cb842e_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-bg_glass_70_ede4d4_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-bg_highlight-hard_75_f5f5b5_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-bg_inset-soft_100_f4f0ec_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-icons_c47a23_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-icons_cb672b_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-icons_f08000_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-icons_f35f07_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\humanity\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-icons_4eb305_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-icons_72b42d_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\le-frog\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-bg_glass_15_5f391b_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-bg_gloss-wave_20_1c160d_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-bg_gloss-wave_25_453326_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-bg_gloss-wave_30_44372c_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-bg_highlight-soft_20_201913_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-bg_highlight-soft_20_619226_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-bg_inset-soft_10_201913_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-icons_222222_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-icons_9bcc60_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-icons_add978_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-icons_e3ddc9_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-icons_f1fd86_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\mint-choc\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-icons_454545_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-icons_999999_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\overcast\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-bg_diagonal-maze_20_6e4f1c_10x10.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-bg_diagonal-maze_40_000000_10x10.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-bg_fine-grain_10_eceadf_60x60.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-bg_fine-grain_10_f8f7f6_60x60.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-bg_fine-grain_15_eceadf_60x60.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-bg_fine-grain_15_f7f3de_60x60.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-bg_fine-grain_15_ffffff_60x60.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-bg_fine-grain_65_654b24_60x60.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-bg_fine-grain_68_b83400_60x60.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-icons_222222_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-icons_3572ac_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-icons_8c291d_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-icons_b83400_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-icons_fbdb93_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\pepper-grinder\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\redmond\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\smoothness\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-bg_glass_55_fcf0ba_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-bg_gloss-wave_100_ece8da_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-bg_highlight-hard_100_f5f3e5_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-bg_highlight-hard_100_fafaf4_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-bg_highlight-hard_15_459e00_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-bg_highlight-hard_95_cccccc_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-bg_highlight-soft_25_67b021_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-bg_highlight-soft_95_ffedad_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-bg_inset-soft_15_2b2922_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-icons_808080_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-icons_847e71_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-icons_8DC262_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-icons_eeeeee_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\south-street\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\start\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-icons_bd7b00_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-icons_d19405_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-icons_eb990f_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-icons_ed9f26_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-icons_fadc7a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\images\ui-icons_ffe180_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\sunny\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-bg_diamond_10_4f4221_10x8.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-bg_diamond_20_372806_10x8.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-bg_diamond_25_675423_10x8.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-bg_diamond_25_d5ac5d_10x8.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-bg_diamond_8_261803_10x8.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-bg_diamond_8_443113_10x8.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-bg_flat_75_ddd4b0_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-icons_070603_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-icons_e8e2b5_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-icons_e9cd86_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-icons_efec9f_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-icons_f2ec64_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-icons_f9f2bd_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\swanky-purse\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-bg_diagonals-small_50_262626_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-bg_flat_0_303030_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-bg_flat_0_4c4c4c_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-bg_glass_40_0a0a0a_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-bg_glass_55_f1fbe5_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-bg_glass_60_000000_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-bg_gloss-wave_55_000000_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-bg_gloss-wave_85_9fda58_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-bg_gloss-wave_95_f6ecd5_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-icons_000000_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-icons_1f1f1f_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-icons_9fda58_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-icons_b8ec79_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\trontastic\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-icons_222222_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-icons_a83300_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-darkness\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\ui-lightness\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\animated-overlay.gif" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-bg_gloss-wave_16_121212_500x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-bg_highlight-hard_15_888888_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-bg_highlight-hard_55_555555_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-bg_highlight-soft_35_adadad_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-bg_highlight-soft_60_dddddd_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-bg_inset-soft_15_121212_1x100.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-icons_666666_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-icons_aaaaaa_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-icons_c98000_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\images\ui-icons_f29a00_256x240.png" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\jquery-ui.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\jquery-ui.min.css" />
+    <Content Include="publico\scripts\terceros\jqueryui\themes\vader\jquery.ui.theme.css" />
+    <Content Include="publico\scripts\terceros\jquery_filedownload\jquery.file.download.js" />
+    <Content Include="publico\scripts\terceros\jquery_fileupload\jquery.fileupload.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\.gitignore" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\allLayouts.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\allTypes.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\api.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\buttons.css" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\consumingAlert.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\customContainer.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\index.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\jquery-1.7.2.min.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\usingMaxVisible.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\usingWithButtons.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\usingWithButtons2.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\usingWithModal.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\demo\usingWithOldOptions.html" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\jquery.noty.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\bottom.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\bottomCenter.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\bottomLeft.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\bottomRight.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\center.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\centerLeft.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\centerRight.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\inline.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\top.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\topCenter.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\topLeft.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\layouts\topRight.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\promise.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\js\noty\themes\default.js" />
+    <Content Include="publico\scripts\terceros\jquery_noty\LICENSE.txt" />
+    <Content Include="publico\scripts\terceros\jquery_noty\README.markdown" />
+    <Content Include="publico\scripts\terceros\knockout-mapping\knockout.mapping.js" />
+    <Content Include="publico\scripts\terceros\knockout-validation\knockout.validation.config.js" />
+    <Content Include="publico\scripts\terceros\knockout-validation\knockout.validation.js" />
+    <Content Include="publico\scripts\terceros\knockout-validation\knockout.validation.min.js" />
+    <Content Include="publico\scripts\terceros\knockout-validation\knockout.validation.min.js.map" />
+    <Content Include="publico\scripts\terceros\metro-ui\jquery.ui.widget.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-accordion.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-button-set.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-calendar.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-carousel.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-core.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-countdown.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-date-format.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-datepicker.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-dialog.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-drag-tile.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-dropdown.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-fluentmenu.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-hint.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-input-control.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-listview.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-live-tile.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-notify.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-plugin-template.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-progressbar.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-rating.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-slider.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-stepper.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-streamer.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-tab-control.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-table.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-times.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-touch-handler.js" />
+    <Content Include="publico\scripts\terceros\metro-ui\metro-treeview.js" />
+    <Content Include="publico\scripts\terceros\moment\moment-with-langs.min.js" />
+    <Content Include="publico\scripts\terceros\moment\moment.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\.gitignore" />
+    <Content Include="publico\scripts\terceros\numeral\.travis.yml" />
+    <Content Include="publico\scripts\terceros\numeral\bower.json" />
+    <Content Include="publico\scripts\terceros\numeral\component.json" />
+    <Content Include="publico\scripts\terceros\numeral\Gruntfile.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\be-nl.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\cs.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\da-dk.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\de-ch.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\de.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\en-gb.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\es-ES.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\es.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\fi.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\fr-CA.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\fr-ch.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\fr.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\hu.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\it.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\ja.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\nl-nl.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\pl.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\pt-br.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\pt-pt.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\ru-UA.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\ru.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\sk.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\th.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\tr.js" />
+    <Content Include="publico\scripts\terceros\numeral\languages\uk-UA.js" />
+    <Content Include="publico\scripts\terceros\numeral\LICENSE" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\be-nl.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\cs.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\da-dk.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\de-ch.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\de.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\en-gb.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\es-ES.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\es.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\fi.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\fr-CA.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\fr-ch.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\fr.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\hu.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\it.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\ja.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\nl-nl.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\pl.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\pt-br.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\pt-pt.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\ru-UA.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\ru.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\sk.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\th.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\tr.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\languages\uk-UA.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\min\numeral.min.js" />
+    <Content Include="publico\scripts\terceros\numeral\numeral.js" />
+    <Content Include="publico\scripts\terceros\numeral\package.json" />
+    <Content Include="publico\scripts\terceros\numeral\README.md" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\be-nl.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\cs.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\da-dk.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\de-ch.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\de.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\en-gb.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\en.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\es-ES.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\es.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\fi.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\fr-CA.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\fr-ch.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\fr.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\hu.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\it.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\ja.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\nl-nl.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\pl.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\pt-br.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\pt-pt.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\ru-UA.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\ru.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\sk.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\th.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\tr.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\languages\uk-UA.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\numeral\format.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\numeral\manipulate.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\numeral\misc.js" />
+    <Content Include="publico\scripts\terceros\numeral\tests\numeral\unformat.js" />
+    <Content Include="publico\scripts\terceros\scroll-startstop.events.jquery.js" />
+    <Content Include="publico\scripts\terceros\slider\jssor.core.js" />
+    <Content Include="publico\scripts\terceros\slider\jssor.slider.js" />
+    <Content Include="publico\scripts\terceros\slider\jssor.utils.js" />
+    <Content Include="publico\scripts\terceros\video-js\video-js.css" />
+    <Content Include="publico\scripts\terceros\video-js\video-js.js" />
+    <Content Include="publico\scripts\terceros\video-js\videojs-ie8.min.js" />
+    <Content Include="reciclables\vistas\CotizacionIndividualCopia1.vbhtml" />
+    <Content Include="reciclables\vistas\CotizacionIndividualCopia2.vbhtml" />
+    <Content Include="publico\scripts\fullcalendar-1.6.4\demos\json-events.php" />
+    <None Include="publico\scripts\mvcprincipal\jquery-1.7.1.intellisense.js" />
+    <None Include="publico\scripts\mvcprincipal\jquery-2.0.3.intellisense.js" />
+    <None Include="publico\scripts\mvcprincipal\jquery.validate-vsdoc.js" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\.gitignore" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\bower.json" />
+    <Content Include="publico\scripts\terceros\bxslider-4-master\readme.md" />
+    <Content Include="tmp\tmp.jpg" />
+    <Content Include="Views\Inspeccion\Partials\__InsAjusDanAnexGuardar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsAjusDanSinGuardar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsLimDanSinGuardar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\ManPeritos.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\_ManPeritos.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManPeritosBuscar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManPeritosEditar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManPeritosNuevo1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManPeritosVer1.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\_SegPeritos.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\_SegUsuarios.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\__SegPeritosBuscar1.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\__SegPeritosEditar1.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\__SegPeritosNuevo1.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\__SegPeritosVer1.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\__SegUsuariosBuscar1.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\__SegUsuariosEditar1.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\__SegUsuariosNuevo1.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\__SegUsuariosPerfil1.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\__SegUsuariosVer1.vbhtml" />
+    <Content Include="Views\Seguridad\SegPeritos.vbhtml" />
+    <Content Include="Views\Seguridad\SegUsuarios.vbhtml" />
+    <Content Include="Views\Mantenimiento\ManMarca.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\_ManMarca.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManMarcaBuscar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManMarcaVer1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManMarcaNuevo1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManMarcaEditar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\ManModelo.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\_ManModelo.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManModeloBuscar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManModeloNuevo1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManModeloEditar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManModeloVer1.vbhtml" />
+    <Content Include="Views\Mantenimiento\ManVersion.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\_ManVersion.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManVersionBuscar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManVersionEditar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManVersionNuevo1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManVersionVer1.vbhtml" />
+    <Content Include="Views\Mantenimiento\ManSucursal.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\_ManSucursal.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManSucursalBuscar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\ManActivarUsu.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\_ManActivarUsu.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManActivarUsuBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\InsAdminActividades.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsAdminActividades.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsAdminActividadesBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsModificarAuditorModal1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsModificarPeritoModal1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsAdminActAudMasivaBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\InsAdminActiAudMasiva.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsAdminActiAudMasiva.vbhtml" />
+    <Content Include="Views\Inspeccion\InsAdminActiPeritMasiva.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsAdminActiPeritMasiva.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsAdminActPeritMasivaBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsSinGuardar1.vbhtml" />
+    <Content Include="Views\Inspeccion\InsConsCasosPorPerit.vbhtml" />
+    <Content Include="Views\Inspeccion\InsConsCasosPorAudit.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsConsCasosPorPerit.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsConsCasosPorAudit.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsConsCasosPorPeritBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsConsCasosPorAuditBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsPorProcPorPeritBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsPorProcPorAuditBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsSubirFotosModal1.vbhtml" />
+    <Content Include="Views\Inspeccion\InsVideos.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsVideos.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsVideosBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\InsInterm.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsInterm.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsIntermAsigBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsIntermBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsIntermPendBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsAudiosBuscar1.vbhtml" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\.gitignore" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\.jamignore" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\artwork\jplayer.blue.monday.psd" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\artwork\jplayer.blue.monday.spirites.psd" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\artwork\jplayer.circle.player.psd" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\artwork\jplayer.pink.flag.psd" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\artwork\jplayer.pink.flag.sprites.psd" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\bower.json" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\CHANGELOG.md" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\CLA.md" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\composer.json" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\CONTRIBUTING.md" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\lib\README.md" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\MIGRATION.md" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\package.json" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\README.md" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\ConnectManager.as" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerEvent.as" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerMp3.as" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerMp4.as" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerRtmp.as" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerStatus.as" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\actionscript\Jplayer.as" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\javascript\add-on\.jshintrc" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\javascript\jplayer\.jshintrc" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\javascript\popcorn\.jshintrc" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\blue.monday\scss\jplayer.blue.monday.scss" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\pink.flag\scss\jplayer.pink.flag.scss" />
+    <Content Include="Views\Inspeccion\Partials\__InsIntermAgregar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsMultimModal1.vbhtml" />
+    <Content Include="publico\scripts\terceros\jPlayer-2.9.2\src\skin\estarseguros\scss\jplayer.blue.monday.scss" />
+    <Content Include="Views\Inspeccion\InsPreCargaInterm.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsPreCargaInterm.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsPreCargaIntermAgregar1.vbhtml" />
+    <Content Include="Views\Inspeccion\InsConsAdmin.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsConsAdmin.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsConsAdminBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\InsConsAnexPerit.vbhtml" />
+    <Content Include="Views\Inspeccion\InsPreCarg.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsConsAnexPerit.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsPreCarg.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsConsAnexPeritBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsObservSintAgenModal1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsSinAnexGuardarModal1.vbhtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Views\Agenda\Agenda.vbhtml" />
+    <Content Include="Views\Agenda\Partials\_Agenda.vbhtml" />
+    <Content Include="Views\Agenda\Partials\__AgendaPeritajesAgregar1.vbhtml" />
+    <Content Include="Views\Agenda\Partials\__AgendaPeritajesGrid1.vbhtml" />
+    <Content Include="Views\Agenda\Partials\__AgendaPeritajesModal1.vbhtml" />
+    <Content Include="Views\Baremo\Bare.vbhtml" />
+    <Content Include="Views\Baremo\Partials\_Bare.vbhtml" />
+    <Content Include="Views\Baremo\Partials\__BareMobrConfig1.vbhtml" />
+    <Content Include="Views\Baremo\Partials\__BareMobrModal1.vbhtml" />
+    <Content Include="Views\Baremo\Partials\__BareRepuConfig1.vbhtml" />
+    <Content Include="Views\Baremo\Partials\__BareRepuModal1.vbhtml" />
+    <Content Include="Views\Home\Contactanos.vbhtml" />
+    <Content Include="Views\Home\Index.vbhtml" />
+    <Content Include="Views\Home\Info.vbhtml" />
+    <Content Include="Views\Inspeccion\InsAudit.vbhtml" />
+    <Content Include="Views\Inspeccion\InsCons.vbhtml" />
+    <Content Include="Views\Inspeccion\InsConsAudit.vbhtml" />
+    <Content Include="Views\Inspeccion\InsConsPto.vbhtml" />
+    <Content Include="Views\Inspeccion\InsProc.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsAudit.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsConsAudit.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsConsPto.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\_InsProc.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsConsAuditBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsConsPtoBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsFotoModal1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsLimDanSusGuardar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsPorAuditBuscar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsPorProcLista1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsRestGuardar1.vbhtml" />
+    <Content Include="Views\Inspeccion\Partials\__InsSusGuardar1.vbhtml" />
+    <Content Include="Views\Log\LogEve.vbhtml" />
+    <Content Include="Views\Log\Partials\_LogEve.vbhtml" />
+    <Content Include="Views\Log\Partials\__LogEveBuscar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\ManRepu.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\_ManRepu.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManRepuAgregar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManRepuBuscar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManRepuModificar1.vbhtml" />
+    <Content Include="Views\Mantenimiento\Partials\__ManRepuVer1.vbhtml" />
+    <Content Include="Views\Seguridad\CambiarContrasena.vbhtml" />
+    <Content Include="Views\Seguridad\DatosUsuario.vbhtml" />
+    <Content Include="Views\Seguridad\IniciarSesion.vbhtml" />
+    <Content Include="Views\Seguridad\ManUsuarios.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\_CambiarContrasena.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\_IniciarSesion.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\_ManUsuarios.vbhtml" />
+    <Content Include="Views\Seguridad\Partials\_RecuperarContrasena.vbhtml" />
+    <Content Include="Views\Seguridad\RecuperarContrasena.vbhtml" />
+    <Content Include="Views\Shared\Error.vbhtml" />
+    <Content Include="Views\Shared\Partials\_Footer.vbhtml" />
+    <Content Include="Views\Shared\Partials\_Footer2.vbhtml" />
+    <Content Include="Views\Shared\Partials\_Header.vbhtml" />
+    <Content Include="Views\Shared\Partials\_LogOn.vbhtml" />
+    <Content Include="Views\Shared\Partials\_Menu.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="publico\scripts\sitfx\viewmodels\administracion\" />
+    <Folder Include="sobreescritura\filtros\" />
+    <Folder Include="Views\Home\Partials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\comunes.proyecto\funciones.lib\funciones.lib.vbproj">
+      <Project>{517ed509-9c50-431f-8245-1a8d44499d85}</Project>
+      <Name>funciones.lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\estarseguros20.capacomuncliente\estarseguros20.capacomuncliente.vbproj">
+      <Project>{d48b7ded-a0ee-498c-a644-a77a83e86337}</Project>
+      <Name>estarseguros20.capacomuncliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\estarseguros20.capaobjetos\estarseguros20.capaobjetos.vbproj">
+      <Project>{ed8a114f-9a75-4bcc-9904-7afac8856afd}</Project>
+      <Name>estarseguros20.capaobjetos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>34370</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:30375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

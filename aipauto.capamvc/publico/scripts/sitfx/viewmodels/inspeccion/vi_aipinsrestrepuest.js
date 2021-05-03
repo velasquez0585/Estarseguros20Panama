@@ -1,0 +1,24 @@
+﻿var vi_aipinsrestrepuest = function (campos_requeridos) {
+    var self = this;
+    self.idaipinsrestrepuest = ko.observable(0);
+    self.comboinsrestrepuest = ko.observableArray();
+    self.idaipinsrest = ko.observable(0);
+    self.comboinsrest = ko.observableArray();
+    self.idaipinsenc = ko.observable(0);
+    self.comboinsenc = ko.observableArray();
+    self.itipoinsenc = ko.observable("");
+    self.combotipoinsenc = ko.observableArray();
+    self.idaipmanrepu = ko.observable(0);
+    self.combomanrepu = ko.observableArray();
+    self.Expr1 = ko.observable(0);
+    self.xnommanrepu = ko.observable("");
+    self.xnominsrestrepuest = ko.observable("");
+    self.iexisinsrestrepuest = ko.observable(false);
+    self.ibueinsrestrepuest = ko.observable(false);
+    self.ireginsrestrepuest = ko.observable(false);
+    self.imalinsrestrepuest = ko.observable(false);
+    self.iestinsrestrepuest = ko.observable("");
+    self.comboestinsrestrepuest = ko.observableArray();
+    self.xdescinsrestrepuest = ko.observable("");
+    self.idseglogreg = ko.observable(0);
+}

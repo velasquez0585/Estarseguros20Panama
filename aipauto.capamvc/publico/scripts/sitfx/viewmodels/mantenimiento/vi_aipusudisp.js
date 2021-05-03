@@ -1,0 +1,24 @@
+﻿var vi_aipusudisp = function (campos_requeridos) {
+    var self = this;
+    self.idaipusudisp = ko.observable(0);
+    self.combousudisp = ko.observableArray();
+    self.idsegmanusu = ko.observable(0);
+    self.combomanusu = ko.observableArray();
+    self.xcedula = ko.observable("");
+    self.xnombres = ko.observable("");
+    self.xapellidos = ko.observable("");
+    self.xnombrecompleto = ko.observable("");
+    self.fnacimiento = ko.observable("");
+    self.xsexo = ko.observable("");
+    self.idaipmandisp = ko.observable(0);
+    self.combomandisp = ko.observableArray();
+    self.xcodimmandisp = ko.observable("");
+    self.xfabmandisp = ko.observable("");
+    self.xmodmandisp = ko.observable("");
+    self.itipomandisp = ko.observable("");
+    self.combotipomandisp = ko.observableArray();
+    self.xdescmandisp = ko.observable("");
+    self.iestatmandisp = ko.observable("");
+    self.comboestatmandisp = ko.observableArray();
+    self.idseglogreg = ko.observable(0);
+}

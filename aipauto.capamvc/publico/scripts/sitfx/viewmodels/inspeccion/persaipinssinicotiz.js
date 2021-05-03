@@ -1,0 +1,21 @@
+﻿var persaipinssinicotiz = function (campos_requeridos) {
+    var self = this;
+    self.idsegmanorg = ko.observable(0);
+    self.idsegmanusuperit = ko.observable(0);
+    self.idcomunmanestado = ko.observable(0);
+    self.idcomunmanlocalid = ko.observable(0);
+    self.itipoinsinssinicotiz = ko.observable("");
+    self.xnacioninssinicotiz = ko.observable("");
+    self.xcedpropinssinicotiz = ko.observable("");
+    self.finicioinssinicotiz = ko.observable("");
+    self.itipoinssinicotiz = ko.observable("");
+    self.xplacainssinicotiz = ko.observable("");
+    self.ffininssinicotiz = ko.observable("");
+    self.icausainssinicotiz = ko.observable("");
+    self.focurrinssinicotiz = ko.observable("");
+    self.fdeclarinssinicotiz = ko.observable("");
+    self.fnotifinssinicotiz = ko.observable("");
+    self.xnuminssinicotiz = ko.observable("");
+    self.xdireccioninssinicotiz = ko.observable("");
+    self.xdescinssinicotiz = ko.observable("");
+}

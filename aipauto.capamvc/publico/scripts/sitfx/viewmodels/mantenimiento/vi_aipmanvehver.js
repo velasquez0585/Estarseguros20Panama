@@ -1,0 +1,20 @@
+﻿var vi_aipmanvehver = function (campos_requeridos) {
+    var self = this;
+    self.idaipmanvehver = ko.observable(0);
+    self.combomanvehver = ko.observableArray();
+    self.idaipmanvehmar = ko.observable(0);
+    self.combomanvehmar = ko.observableArray();
+    self.xnommanvehmar = ko.observable("");
+    self.idaipmanvehmod = ko.observable(0);
+    self.combomanvehmod = ko.observableArray();
+    self.xnommanvehmod = ko.observable("");
+    self.xnommanvehver = ko.observable("");
+    self.naniomanvehver = ko.observable(0);
+    self.xdescmanvehver = ko.observable("");
+    self.iestatmanvehmar = ko.observable("");
+    self.comboestatmanvehmar = ko.observableArray();
+    self.iestatmanvehmod = ko.observable("");
+    self.comboestatmanvehmod = ko.observableArray();
+    self.iestatmanvehver = ko.observable("");
+    self.comboestatmanvehver = ko.observableArray();
+}

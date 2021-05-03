@@ -1,0 +1,22 @@
+﻿var aipinsajusanexmobr = function (campos_requeridos) {
+    var self = this;
+    self.idaipinsajusanexmobr = ko.observable(0);
+    self.idaipinsajusanex = ko.observable(0);
+    self.comboinsajusanex = ko.observableArray();
+    self.idaipbaremobr = ko.observable(0);
+    self.combobaremobr = ko.observableArray();
+    self.idaipsusrepu = ko.observable(0);
+    self.combosusrepu = ko.observableArray();
+    self.idaipsustam = ko.observable(0);
+    self.combosustam = ko.observableArray();
+    self.idaipsusmat = ko.observable(0);
+    self.combosusmat = ko.observableArray();
+    self.idaipsusmobr = ko.observable(0);
+    self.combosusmobr = ko.observableArray();
+    self.ncantinsajusanexmobr = ko.observable(0);
+    self.nprecfininsajusanexmobr = ko.observable(0);
+    self.xdescinsajusanexmobr = ko.observable("");
+    self.iestatinsajusanexmobr = ko.observable("");
+    self.comboestatinsajusanexmobr = ko.observableArray();
+    self.idseglogreg = ko.observable(0);
+}

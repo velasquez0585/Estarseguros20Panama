@@ -1,0 +1,70 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+a {
+	text-decoration: none;
+}
+body {
+	background: #ecf3fa;
+}
+	#container 
+		{
+		    background: url(../imagenes/sitfx/fondo_sitfx1.png) repeat-x;		    
+		    margin: 0 auto;
+		    width: 1000px;
+			min-height: 600px;
+			padding-top: 1px;
+			margin-top: 30px;
+			border-radius: 50px;
+			box-shadow: 0px 0px 15px #000;
+			
+		}
+		h2 {
+			color: red;
+			font-size: 34px;
+			font-weight: bold;
+			margin:0 auto;
+			margin-top: 150px;
+
+			text-align: center;
+		}
+		img {
+		    border: 0;
+		}
+		#error {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+			width: 615px; height: 225px;
+		}
+		#logo {
+			display: block;
+			margin: 15px auto 50px auto;
+			text-align: center;
+			width: 200px; height: 63px;
+		}
+		p {
+			color: #0d58ac;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+		}
+		#bar img
+		{
+		    margin: 0 auto;
+		    margin-top: -0px;
+		    width: 1000px;	    
+		    
+		    }		    
+	    #footer
+	    {
+		   margin: 0 auto;
+		   margin-top: 150px;
+	        }
+		 #logo img
+		 {
+		  width: 200px;
+		  height: 60px;
+		  }

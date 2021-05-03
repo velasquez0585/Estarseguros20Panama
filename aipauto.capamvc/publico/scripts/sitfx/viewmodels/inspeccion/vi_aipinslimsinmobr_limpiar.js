@@ -1,0 +1,20 @@
+﻿self.limpiar = function () {
+    self.idaipinslimsinmobr(0);
+    self.idaipinslimsin(0);
+    self.idaipinsenc(0);
+    self.itipoinsenc("");
+    self.idaipbaremobr(0);
+    self.idaipmanrepu(0);
+    self.xnommanrepu("");
+    self.faplibaremobr("");
+    self.itipobaremobr("");
+    self.itamapiezbaremobr("");
+    self.imaterpiezbaremobr("");
+    self.mcostbaremobr(0);
+    self.xdescbaremobr("");
+    self.ncantinslimsinmobr(0);
+    self.nprecfininslimsinmobr(0);
+    self.xdescinslimsinmobr("");
+    self.iestatinslimsinmobr("");
+    self.idseglogreg(0);
+}

@@ -1,0 +1,21 @@
+﻿var aipinssinmobr = function (campos_requeridos) {
+    var self = this;
+    self.idaipinssinmobr = ko.observable(0);
+    self.idaipinssin = ko.observable(0);
+    self.comboinssin = ko.observableArray();
+    self.idaipmanrepu = ko.observable(0);
+    self.combomanrepu = ko.observableArray();
+    self.ncantinssinmobr = ko.observable(0);
+    self.iorigrepuinssinmobr = ko.observable("");
+    self.comboorigrepuinssinmobr = ko.observableArray();
+    self.itaminssinmobr = ko.observable("");
+    self.combotaminssinmobr = ko.observableArray();
+    self.itipomatinssinmobr = ko.observable("");
+    self.combotipomatinssinmobr = ko.observableArray();
+    self.itidainssinmobr = ko.observable("");
+    self.nprecfininssinmobr = ko.observable(0);
+    self.xdescinssinmobr = ko.observable("");
+    self.iestatinssinmobr = ko.observable("");
+    self.comboestatinssinmobr = ko.observableArray();
+    self.idseglogreg = ko.observable(0);
+}

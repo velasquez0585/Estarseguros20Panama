@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF430F1D-4093-464F-9802-8A2BB4AA1C32}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>estarseguros20.capawebapi</RootNamespace>
+    <AssemblyName>estarseguros20.capawebapi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>estarseguros20.capawebapi.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>estarseguros20.capawebapi.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EmitMapper">
+      <HintPath>..\packages\EmitMapper.1.0.0\lib\EmitMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.2400\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Tracing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Tracing.4.0.0\lib\net40\System.Web.Http.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.vb" />
+    <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Controllers\aipauto\entidades\agenda\aipactivperiController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\baremo\aipbaremobrController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\baremo\aipbarerepuController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsajusanexController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsajusanexmobrController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsajusanexrepuController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsajussinController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsajussinmobrController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsajussinrepuController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsarchController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsencController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsfotoController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinslimsinController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinslimsinmobrController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinslimsinrepuController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinslimsusController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinslimsusmobrController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinslimsusrepuController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsmotivController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsrestController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsrestrepuestController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsrestsseController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinsrestssmController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssinController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssinmobrController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssinmotivController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssinrepuController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssusaccController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssusController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssusinfcompController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssusmotivController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssusrepuestController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssussseController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\inspeccion\aipinssusssmController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipextsintagendaController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsarchController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\log\aiplogeveController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmandispController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmaninfcompController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmanrepuController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmanvehaccController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmanvehController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmanvehmarController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmanvehmodController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmanvehsseController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmanvehssmController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\mantenimiento\aipmanvehverController.vb" />
+    <Compile Include="Controllers\aipauto\entidades\usuario\aipusudispController.vb" />
+    <Compile Include="Controllers\aipauto\modulos\ActividadController.vb" />
+    <Compile Include="Controllers\aipauto\modulos\BaremoController.vb" />
+    <Compile Include="Controllers\aipauto\modulos\InspeccionController.vb" />
+    <Compile Include="Controllers\aipauto\modulos\MantenimientoController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\agenda\vi_aipactivperiController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\agenda\vi_aipactivperidetController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\baremo\vi_aipbaremobrController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\baremo\vi_aipbarerepuController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\baremo\vi_comboaipbaremobrmaterController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\baremo\vi_comboaipbaremobrmobrController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\baremo\vi_comboaipbaremobrtamaController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\baremo\vi_comboaipbarerepuorigController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsajusanexController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsajusanexmobragrupController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsajusanexmobrController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsajusanexrepuController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsajussinController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsajussinmobragrupController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsajussinmobrController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsajussinrepuController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsauditagrupController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsdistauditController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsdistauditdetController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsdistauditperfController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsdistperitController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsdistperitdetController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsdistperitperfController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsencController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsencdetController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsfotoController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinslimsinController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinslimsinmobrController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinslimsinrepuController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinslimsusController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinslimsusmobrController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinslimsusrepuController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsperitagrupController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsrestController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsrestrepuestController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsrestsseController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinsrestssmController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssinController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssinmobrController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssinmotivController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssinrepuController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssusaccController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssusController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssusinfcompController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssusmotivController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssusrepuestController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssussseController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_aipinssusssmController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\inspeccion\vi_intermediacionController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\log\vi_aiplogeveController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\mantenimiento\vi_aipmanrepuController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\mantenimiento\vi_aipmanvehController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\mantenimiento\vi_aipmanvehmodController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\mantenimiento\vi_aipmanvehverController.vb" />
+    <Compile Include="Controllers\aipauto\vistas\usuario\vi_aipusudispController.vb" />
+    <Compile Include="Controllers\comun\entidades\configuracion\comunconfcontadController.vb" />
+    <Compile Include="Controllers\comun\entidades\configuracion\comunconfsmtpController.vb" />
+    <Compile Include="Controllers\comun\entidades\configuracion\comunconfvalorController.vb" />
+    <Compile Include="Controllers\comun\entidades\mantenimiento\comunmancomController.vb" />
+    <Compile Include="Controllers\comun\entidades\mantenimiento\comunmancontController.vb" />
+    <Compile Include="Controllers\comun\entidades\mantenimiento\comunmandirController.vb" />
+    <Compile Include="Controllers\comun\entidades\mantenimiento\comunmanemprController.vb" />
+    <Compile Include="Controllers\comun\entidades\mantenimiento\comunmanestadoController.vb" />
+    <Compile Include="Controllers\comun\entidades\mantenimiento\comunmanlocalidController.vb" />
+    <Compile Include="Controllers\comun\entidades\mantenimiento\comunmanpaisController.vb" />
+    <Compile Include="Controllers\comun\entidades\mantenimiento\comunmanpersController.vb" />
+    <Compile Include="Controllers\comun\modulos\ComunController.vb" />
+    <Compile Include="Controllers\seginsoft\entidades\seguridad\segmancargController.vb" />
+    <Compile Include="Controllers\seginsoft\entidades\seguridad\segmandepController.vb" />
+    <Compile Include="Controllers\seginsoft\entidades\seguridad\segmanusuController.vb" />
+    <Compile Include="Controllers\seginsoft\entidades\trazabilidad\seglogerrController.vb" />
+    <Compile Include="Controllers\seginsoft\modulos\seguridadController.vb" />
+    <Compile Include="Controllers\seginsoft\vistas\seguridad\vi_combosegmanorgController.vb" />
+    <Compile Include="Controllers\seginsoft\vistas\seguridad\vi_segaccperfController.vb" />
+    <Compile Include="Controllers\seginsoft\vistas\seguridad\vi_segappperfController.vb" />
+    <Compile Include="Controllers\seginsoft\vistas\seguridad\vi_segappprogController.vb" />
+    <Compile Include="Controllers\seginsoft\vistas\seguridad\vi_segmanusuController.vb" />
+    <Compile Include="Controllers\seginsoft\vistas\seguridad\vi_segusudetperf2Controller.vb" />
+    <Compile Include="Controllers\seginsoft\vistas\seguridad\vi_segusuperfController.vb" />
+    <Compile Include="Controllers\UploadController.vb" />
+    <Compile Include="funciones\CustomMultipartFormDataStreamProvider.vb" />
+    <Compile Include="funciones\funciones.vb" />
+    <Compile Include="funciones\VideoStream.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\modelo.dbestarseguros20.config.vb" />
+    <Compile Include="Models\modelo.dbestarseguros20.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelo.dbestarseguros20.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\modelo.dbestarseguros20oracle.Designer.vb" />
+    <Compile Include="Models\modelo.dbestarseguros20oracle1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelo.dbestarseguros20oracle.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controllers\ValuesController.vb" />
+    <Compile Include="sobreescritura\ApiKeyHandler.vb" />
+    <Compile Include="sobreescritura\reciclaje\BasicAuthHttpModule.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\modelo.dbestarseguros20.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>modelo.dbestarseguros20.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Models\modelo.dbestarseguros20oracle.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>modelo.dbestarseguros20oracle1.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="App.config.uninstall.xdt" />
+    <Content Include="App.config.install.xdt" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="App_Data\leeme.txt" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\estarseguros20.capawebapi.pubxml" />
+    <Content Include="Web.config.uninstall.xdt" />
+    <Content Include="Web.config.install.xdt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\comun\vistas\" />
+    <Folder Include="Models\oracle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\comunes.proyecto\culturas.lib\culturas.lib.vbproj">
+      <Project>{2fa59434-7ed1-4ef7-81e4-82207015cdfd}</Project>
+      <Name>culturas.lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\comunes.proyecto\funciones.lib\funciones.lib.vbproj">
+      <Project>{517ed509-9c50-431f-8245-1a8d44499d85}</Project>
+      <Name>funciones.lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\comunes.proyecto\objetos.lib\objetos.lib.vbproj">
+      <Project>{3b4cd338-6a41-4398-9a4b-adca002f7586}</Project>
+      <Name>objetos.lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\estarseguros20.capaobjetos\estarseguros20.capaobjetos.vbproj">
+      <Project>{ed8a114f-9a75-4bcc-9904-7afac8856afd}</Project>
+      <Name>estarseguros20.capaobjetos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>34377</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:34188/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

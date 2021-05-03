@@ -1,0 +1,22 @@
+﻿var aipinssus = function (campos_requeridos) {
+    var self = this;
+    self.idaipinssus = ko.observable(0);
+    self.idaipinsenc = ko.observable(0);
+    self.comboinsenc = ko.observableArray();
+    self.xnomintinssus = ko.observable("");
+    self.xnomsolinssus = ko.observable("");
+    self.iluginssus = ko.observable("");
+    self.comboluginssus = ko.observableArray();
+    self.idaipmanveh = ko.observable(0);
+    self.combomanveh = ko.observableArray();
+    self.nkiloinssus = ko.observable(0);
+    self.xsucuinssus = ko.observable("");
+    self.iserbodinssus = ko.observable(false);
+    self.ialarcorrinssus = ko.observable(false);
+    self.xserinssus = ko.observable("");
+    self.xdictinssus = ko.observable("");
+    self.xdescinssus = ko.observable("");
+    self.iestatinssus = ko.observable("");
+    self.comboestatinssus = ko.observableArray();
+    self.idseglogreg = ko.observable(0);
+}
