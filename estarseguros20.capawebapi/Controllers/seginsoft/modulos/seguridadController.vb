@@ -5245,6 +5245,49 @@ Namespace seginsoft.modulos.controlador
             End Try
         End Function
 
+        <HttpPost()> _
+        Public Function ObtenerCboSucursal() As List(Of vi_combosegmanorg)
+            Try
+
+                Dim vi_combosegmanorgController As New vi_combosegmanorgController
+                Dim lista_vi_combosegmanorg As New List(Of vi_combosegmanorg)
+                Dim _lista_vi_combosegmanorg1 As New List(Of vi_combosegmanorg)
+                lista_vi_combosegmanorg = vi_combosegmanorgController.selvi_combosegmanorgsinsel()
+
+                Dim vi_combosegmanorg As New vi_combosegmanorg
+                With vi_combosegmanorg
+                    .idsegmanorg = 0
+                    .xnombrecomercial = "SELECCIONE"
+                End With
+                _lista_vi_combosegmanorg1.Insert(0, vi_combosegmanorg)
+
+                Dim count As Integer = _lista_vi_combosegmanorg1.Count
+                If (lista_vi_combosegmanorg.Count > 0) Then
+                    For i As Integer = 0 To lista_vi_combosegmanorg.Count - 1
+
+                        vi_combosegmanorg = New vi_combosegmanorg
+                        vi_combosegmanorg.idsegmanorg = lista_vi_combosegmanorg(i).idsegmanorg
+                        vi_combosegmanorg.xnombrecomercial = lista_vi_combosegmanorg(i).xnombrecomercial
+                        _lista_vi_combosegmanorg1.Insert(count, vi_combosegmanorg)
+                        count = count + 1
+
+                    Next
+                End If
+
+                Return _lista_vi_combosegmanorg1
+
+            Catch ex As Exception
+                Dim _lista_vi_combosegmanorg As New List(Of vi_combosegmanorg)
+                Dim vi_combosegmanorg As New vi_combosegmanorg
+                With vi_combosegmanorg
+                    .idsegmanorg = 0
+                    .xnombrecomercial = "SELECCIONE"
+                End With
+                _lista_vi_combosegmanorg.Insert(0, vi_combosegmanorg)
+                Return _lista_vi_combosegmanorg
+            End Try
+        End Function
+
 
     End Class
 End Namespace

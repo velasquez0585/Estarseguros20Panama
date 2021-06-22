@@ -24326,6 +24326,37 @@ Namespace aipauto.modulos.controlador
             Return lista_Datos
         End Function
 
+        <HttpPost()> _
+        Public Function ObtenerMotivosSuscripcion() As List(Of aipinsmotiv)
 
+            Dim aipinsmotivController As New aipinsmotivController
+            Dim lista_aipinsmotiv As List(Of aipinsmotiv) = aipinsmotivController.selaipinsmotivactivosportipo("SUSCRIPCION")
+
+
+            Return lista_aipinsmotiv
+
+        End Function
+
+        <HttpPost()> _
+        Public Function ObtenerMotivosSiniestros() As List(Of aipinsmotiv)
+
+            Dim aipinsmotivController As New aipinsmotivController
+            Dim lista_aipinsmotiv As List(Of aipinsmotiv) = aipinsmotivController.selaipinsmotivactivosportipo("SINIESTRO")
+
+
+            Return lista_aipinsmotiv
+
+        End Function
+
+        <HttpPost()> _
+        Public Function ObtenerMotivos() As List(Of aipinsmotiv)
+
+            Dim aipinsmotivController As New aipinsmotivController
+            Dim lista_aipinsmotiv As List(Of aipinsmotiv) = aipinsmotivController.selaipinsmotivactivos()
+
+
+            Return lista_aipinsmotiv
+
+        End Function
     End Class
 End Namespace
