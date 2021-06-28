@@ -873,7 +873,7 @@ Public Class aipmanvehmodController
         <HttpPost()> _
         Public Function selaipmanvehmodactivosxidmarca(idaipmanvehmar As Decimal) As List(Of aipmanvehmod)
             Dim lista_aipmanvehmod As List(Of aipmanvehmod) = (From p In _db.aipmanvehmod
-                                                               Where p.idaipmanvehmod > 0 And p.idaipmanvehmar = idaipmanvehmar And p.iestatmanvehmod = "ACTIVO"
+                                                               Where p.idaipmanvehmod > 0 And p.idaipmanvehmar = idaipmanvehmar And p.iestatmanvehmod = "ACTIVO" Or p.iestatmanvehmod = "ACTIVA"
                                                                Order By p.xnommanvehmod
                                                         Select p).ToList
 

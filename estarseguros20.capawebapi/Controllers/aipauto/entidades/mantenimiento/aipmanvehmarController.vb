@@ -839,7 +839,7 @@ Public Class aipmanvehmarController
         <HttpPost()> _
         Public Function selaipmanvehmaractivas() As List(Of aipmanvehmar)            
             Dim lista_aipmanvehmar As List(Of aipmanvehmar) = (From p In _db.aipmanvehmar
-                                                        Where p.idaipmanvehmar > 0 And p.iestatmanvehmar = "ACTIVA"
+                                                        Where p.idaipmanvehmar > 0 And p.iestatmanvehmar = "ACTIVA" Or p.iestatmanvehmar = "ACTIVO"
                                                                 Order By p.xnommanvehmar
                                                         Select p).ToList
 

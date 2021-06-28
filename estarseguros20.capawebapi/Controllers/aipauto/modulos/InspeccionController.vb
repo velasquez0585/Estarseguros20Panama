@@ -24358,5 +24358,26 @@ Namespace aipauto.modulos.controlador
             Return lista_aipinsmotiv
 
         End Function
+
+
+
+
+        ''' <summary>
+        ''' este metodo se creo con la finalidad de crear una inspeccion de riesgo y que ya se cree con todo el contenido basico y asignada al usuario que la creo
+        ''' </summary>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
+        <HttpPost()> _
+        Public Function GuardarIsnpeccionRiesgoCompleta(inspriesgo As inspriesgo) As respopera
+
+            Dim respopera As New respopera()
+            respopera.irespuesta = "1"
+            respopera.xmsjtecnico = "Falta el proceso en Back-End"
+            respopera.xmsjusuario = "Ya los campos llegaron para ser procesados, falta la parte fuera de la mobile " + " Nombre " + inspriesgo.nombre
+            Return respopera
+
+        End Function
+
+
     End Class
 End Namespace
