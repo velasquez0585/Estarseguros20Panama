@@ -656,14 +656,14 @@ Public Class aipinslimsusrepuController
 	Dim param13 As New SqlClient.SqlParameter
 	param13.SqlDbType = SqlDbType.varchar
 	param13.Size = 500
-	param13.Value = "
+	param13.Value = ""
 	param13.ParameterName = "p_xdescinslimsusrepu"
 	
 	Dim param14 As New SqlClient.SqlParameter
 	param14.SqlDbType = SqlDbType.varchar
 	param14.Size = 20
-	param14.Value = "
-	param14.ParameterName = "p_iestatinslimsusrepu"
+                param14.Value = ""
+                param14.ParameterName = "p_iestatinslimsusrepu"
 	
 	Dim param15 As New SqlClient.SqlParameter
 	param15.SqlDbType = SqlDbType.decimal

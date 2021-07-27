@@ -34,6 +34,7 @@ Imports Oracle.ManagedDataAccess
 Imports EmitMapper
 Imports estarseguros20.capaobjetos.seginsoft.modelo.dbestarseguros20.entidades.trazabilidad
 Imports estarseguros20.capaobjetos
+Imports Newtonsoft.Json
 
 Namespace aipauto.modulos.controlador
     Public Class InspeccionController
@@ -44,7 +45,7 @@ Namespace aipauto.modulos.controlador
 
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CrearAipInsEncMovil(aipinsenc As aipinsenc) As respopera
             Try
 
@@ -118,7 +119,7 @@ Namespace aipauto.modulos.controlador
                 param10.Value = aipinsenc.idsegmanusuperit
                 param10.ParameterName = "p_idsegmanusuperit"
 
-                
+
 
 
                 Dim param11 As New SqlClient.SqlParameter
@@ -306,7 +307,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AgregarAipLogEve(xnomlogeve As String, idsegmanusu As Decimal, iamblogeve As String) As respopera
             Try
 
@@ -419,8 +420,8 @@ Namespace aipauto.modulos.controlador
             Try
 
                 If (Android Is Nothing) Then
-                    Return New HttpResponseMessage() With { _
-                     .Content = New StringContent(sb.ToString()) _
+                    Return New HttpResponseMessage() With {
+                     .Content = New StringContent(sb.ToString())
                     }
                 End If
 
@@ -449,8 +450,8 @@ Namespace aipauto.modulos.controlador
                 'lugar = "Nombre archivo " & fileName
                 'log_errores(lugar, xrutaraiz)
 
-                Return New HttpResponseMessage() With { _
-                     .Content = New StringContent(sb.ToString()) _
+                Return New HttpResponseMessage() With {
+                     .Content = New StringContent(sb.ToString())
                 }
 
 
@@ -702,8 +703,8 @@ Namespace aipauto.modulos.controlador
                 End If
 
 
-                Return New HttpResponseMessage() With { _
-                     .Content = New StringContent(sb.ToString()) _
+                Return New HttpResponseMessage() With {
+                     .Content = New StringContent(sb.ToString())
                 }
 
             Catch e As Exception
@@ -883,7 +884,7 @@ Namespace aipauto.modulos.controlador
                 ''************************************************************************
                 ''Se extraen los datos del nombre de la imagen
 
-                
+
 
                 'Forma del nombre del archivo
                 'idenc.tipoCierre.imei.date.contador.extension#latitud#longitud
@@ -1052,7 +1053,7 @@ Namespace aipauto.modulos.controlador
                         End If
                     End If
                 End If
-                
+
 
 
 
@@ -1060,8 +1061,8 @@ Namespace aipauto.modulos.controlador
                     File.Delete(root & "\" + nombreArchivo)
                 End If
 
-                Return New HttpResponseMessage() With { _
-                     .Content = New StringContent(sb.ToString()) _
+                Return New HttpResponseMessage() With {
+                     .Content = New StringContent(sb.ToString())
                 }
 
             Catch e As Exception
@@ -1122,8 +1123,8 @@ Namespace aipauto.modulos.controlador
                 log_errores(lugar, xrutaraiz)
                 ''AgregarAipLogEve(lugar, 0, "VIDEOS")
 
-                Return New HttpResponseMessage() With { _
-                     .Content = New StringContent(sb.ToString()) _
+                Return New HttpResponseMessage() With {
+                     .Content = New StringContent(sb.ToString())
                 }
 
             Catch e As Exception
@@ -1742,8 +1743,8 @@ Namespace aipauto.modulos.controlador
                     End If
                 End If
 
-                Return New HttpResponseMessage() With { _
-                     .Content = New StringContent(sb.ToString()) _
+                Return New HttpResponseMessage() With {
+                     .Content = New StringContent(sb.ToString())
                 }
 
             Catch e As Exception
@@ -1996,8 +1997,8 @@ Namespace aipauto.modulos.controlador
                 End If
                 'fin agregar el log de evento
 
-                Return New HttpResponseMessage() With { _
-                     .Content = New StringContent(sb.ToString()) _
+                Return New HttpResponseMessage() With {
+                     .Content = New StringContent(sb.ToString())
                 }
 
             Catch e As Exception
@@ -2016,7 +2017,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerListaAgendaPendienteMovil(xcorreoelectronico1 As String) As List(Of agendamovil)
             Dim fecha_start As New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0)
             '
@@ -2569,8 +2570,8 @@ Namespace aipauto.modulos.controlador
                 End If
                 'fin agregar el log de evento
 
-                Return New HttpResponseMessage() With { _
-                     .Content = New StringContent(sb.ToString()) _
+                Return New HttpResponseMessage() With {
+                     .Content = New StringContent(sb.ToString())
                 }
 
             Catch e As Exception
@@ -2579,7 +2580,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function obtener_bytes_imagen() As Byte()
 
 
@@ -2742,7 +2743,7 @@ Namespace aipauto.modulos.controlador
             Return respuesta
         End Function
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function GirarImagen(idaipinsenc As Decimal, xnomarchinsfoto As String, grados As Decimal) As DownloadFilesResult
             'Grados se envia -90 si se quiere girar a la derecha
             'Grados se envia 90 si se quiere girar a la izquierda
@@ -3028,7 +3029,7 @@ Namespace aipauto.modulos.controlador
 
 
         'verificar metodo
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ObtenerInspeccionFotoPorPos(idaipinsenc As Decimal, nsecinsfoto As Short) As DownloadFilesResult
             Try
 
@@ -3092,7 +3093,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ObtenerInspeccionFotoPorEncyNombFoto(idaipinsenc As Decimal, xnomarchinsfoto As String) As DownloadFilesResult
             Try
 
@@ -3156,7 +3157,7 @@ Namespace aipauto.modulos.controlador
 
 
         'verificar metodo
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ObtenerInspeccionFotoPorInspeccionEnc(idaipinsenc As Decimal) As List(Of DownloadFilesResult)
             Try
 
@@ -3201,19 +3202,19 @@ Namespace aipauto.modulos.controlador
                             DownloadFilesResult.ArchivoByte = File.ReadAllBytes(xruta)
                             DownloadFilesResult.Name = lista_vi_aipinsfoto(i).xnomarchinsfoto
                             DownloadFilesResult.Type = System.IO.Path.GetExtension(xruta)
-                            lista_DownloadFilesResult.Add(New DownloadFilesResult() With { _
-                .ArchivoByte = DownloadFilesResult.ArchivoByte, _
-            .Name = DownloadFilesResult.Name, _
-            .Type = DownloadFilesResult.Type _
+                            lista_DownloadFilesResult.Add(New DownloadFilesResult() With {
+                .ArchivoByte = DownloadFilesResult.ArchivoByte,
+            .Name = DownloadFilesResult.Name,
+            .Type = DownloadFilesResult.Type
             })
                         Else
                             DownloadFilesResult.ArchivoByte = Convert.FromBase64String("")
                             DownloadFilesResult.Name = ""
                             DownloadFilesResult.Type = ""
-                            lista_DownloadFilesResult.Add(New DownloadFilesResult() With { _
-                .ArchivoByte = DownloadFilesResult.ArchivoByte, _
-            .Name = DownloadFilesResult.Name, _
-            .Type = DownloadFilesResult.Type _
+                            lista_DownloadFilesResult.Add(New DownloadFilesResult() With {
+                .ArchivoByte = DownloadFilesResult.ArchivoByte,
+            .Name = DownloadFilesResult.Name,
+            .Type = DownloadFilesResult.Type
             })
                         End If
                     Next
@@ -3223,10 +3224,10 @@ Namespace aipauto.modulos.controlador
                     DownloadFilesResult.Name = ""
                     DownloadFilesResult.Type = ""
 
-                    lista_DownloadFilesResult.Add(New DownloadFilesResult() With { _
-        .ArchivoByte = DownloadFilesResult.ArchivoByte, _
-    .Name = DownloadFilesResult.Type, _
-    .Type = DownloadFilesResult.Type _
+                    lista_DownloadFilesResult.Add(New DownloadFilesResult() With {
+        .ArchivoByte = DownloadFilesResult.ArchivoByte,
+    .Name = DownloadFilesResult.Type,
+    .Type = DownloadFilesResult.Type
     })
                 End If
 
@@ -3240,17 +3241,17 @@ Namespace aipauto.modulos.controlador
                 DownloadFilesResult.Name = ""
                 DownloadFilesResult.Type = ""
 
-                lista_DownloadFilesResult.Add(New DownloadFilesResult() With { _
-    .ArchivoByte = Convert.FromBase64String(""), _
-.Name = "", _
-.Type = "" _
+                lista_DownloadFilesResult.Add(New DownloadFilesResult() With {
+    .ArchivoByte = Convert.FromBase64String(""),
+.Name = "",
+.Type = ""
 })
 
                 Return lista_DownloadFilesResult
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function EliminarFotoInspeccion(idaipinsenc As Decimal, xnomarchinsfoto As String) As respopera
 
             Dim respopera As New respopera
@@ -3311,7 +3312,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function EliminarFotoInspeccion2(idaipinsenc As Decimal, xnomarchinsfoto As String, idsegmanusu As Decimal) As respopera
 
             Dim respopera As New respopera
@@ -3394,10 +3395,10 @@ Namespace aipauto.modulos.controlador
 
 
 
-        
 
 
-        <HttpPost()> _
+
+        <HttpPost()>
         Public Function ModificarAipInsEncPorId(aipinsenc As aipinsenc) As respopera
             Try
 
@@ -3476,7 +3477,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarTodasAipInsEnc() As respopera
             Try
 
@@ -3556,7 +3557,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AprobarInspeccionPorAuditar(idaipinsenc As Decimal) As respopera
             Try
                 Dim aipinsencController As New aipinsencController
@@ -3636,7 +3637,7 @@ Namespace aipauto.modulos.controlador
 
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AprobarTodasInspeccionesPorAuditar() As respopera
             Try
                 Dim aipinsencController As New aipinsencController
@@ -3678,7 +3679,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AprobarTodasInspeccionesPorAuditarPorAudit(idsegmanusuaudit As Decimal) As respopera
             Try
                 Dim aipinsencController As New aipinsencController
@@ -3802,7 +3803,7 @@ Namespace aipauto.modulos.controlador
         '        Return respopera
         '    End Try
         'End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionSusSse(lista_vi_aipinssussse As List(Of vi_aipinssussse)) As respopera
             Try
                 'Dim aipinssussseController As New aipinssussseController
@@ -3888,7 +3889,7 @@ Namespace aipauto.modulos.controlador
         'End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionSusSsm(lista_vi_aipinssusssm As List(Of vi_aipinssusssm)) As respopera
             Try
                 'Dim aipinssusssmController As New aipinssusssmController
@@ -3934,7 +3935,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionSusAcc(lista_vi_aipinssusacc As List(Of vi_aipinssusacc)) As respopera
             Try
                 'Dim aipinssusaccController As New aipinssusaccController
@@ -3982,7 +3983,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionSusRepuEstadGen(lista_vi_aipinssusrepuest As List(Of vi_aipinssusrepuest)) As respopera
             Try
                 Dim vi_aipinssusrepuestController As New vi_aipinssusrepuestController
@@ -4030,7 +4031,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionInfoComplementaria(lista_vi_aipinssusinfcomp As List(Of vi_aipinssusinfcomp)) As respopera
             Try
                 'Dim aipinssusaccController As New aipinssusaccController
@@ -4113,7 +4114,7 @@ Namespace aipauto.modulos.controlador
         '        Return respopera
         '    End Try
         'End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionSusMotivos(lista_vi_aipinssusmotiv As List(Of vi_aipinssusmotiv)) As respopera
             Try
                 Dim vi_aipinssusmotivController As New vi_aipinssusmotivController
@@ -4175,7 +4176,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionSinMotivos(lista_vi_aipinssinmotiv As List(Of vi_aipinssinmotiv)) As respopera
             Try
                 Dim vi_aipinssinmotivController As New vi_aipinssinmotivController
@@ -4237,7 +4238,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function TotalPrecioManoObraSinistroPorIdSin(idaipinssin As Decimal) As Decimal
             Try
                 Dim nprecfininssinmobr As Decimal = 0
@@ -4249,7 +4250,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function TotalCantidadManoObraSinistroPorIdSin(idaipinssin As Decimal) As Int32
             Try
                 Dim ncantinssinmobr As Int32 = 0
@@ -4261,7 +4262,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function TotalPrecioRepuestoSinistroPorIdSin(idaipinssin As Decimal) As Decimal
             Try
                 Dim nprecfininssinrepu As Decimal = 0
@@ -4273,7 +4274,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function TotalCantidadRepuestoSinistroPorIdSin(idaipinssin As Decimal) As Int32
             Try
                 Dim ncantinssinrepu As Int32 = 0
@@ -4296,7 +4297,7 @@ Namespace aipauto.modulos.controlador
         '    Return lista_aipinssussse
 
         'End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerSuscripcionSseVeh(idaipinssus As Decimal) As List(Of vi_aipinssussse)
 
             Dim vi_aipinssussseController As New vi_aipinssussseController
@@ -4318,7 +4319,7 @@ Namespace aipauto.modulos.controlador
         '    Return lista_aipinssusssm
 
         'End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerSuscripcionSsmVeh(idaipinssus As Decimal) As List(Of vi_aipinssusssm)
 
             Dim vi_aipinssusssmController As New vi_aipinssusssmController
@@ -4340,7 +4341,7 @@ Namespace aipauto.modulos.controlador
         '    Return lista_aipinssusacc
 
         'End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerSuscripcionAccVeh(idaipinssus As Decimal) As List(Of vi_aipinssusacc)
 
             Dim vi_aipinssusaccController As New vi_aipinssusaccController
@@ -4352,7 +4353,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerRepuestosSuscripcionEstadGen(idaipinssus As Decimal) As List(Of vi_aipinssusrepuest)
 
             Dim vi_aipinssusrepuestController As New vi_aipinssusrepuestController
@@ -4375,7 +4376,7 @@ Namespace aipauto.modulos.controlador
 
         'End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMotivosInspeccionSusActivos(idaipinssus As Decimal) As List(Of vi_aipinssusmotiv)
 
             Dim vi_aipinssusmotivController As New vi_aipinssusmotivController
@@ -4387,7 +4388,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMotivosInspeccionSinActivos(idaipinssin As Decimal) As List(Of vi_aipinssinmotiv)
 
             Dim vi_aipinssinmotivController As New vi_aipinssinmotivController
@@ -4400,7 +4401,7 @@ Namespace aipauto.modulos.controlador
 
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarInspeccionSuscripcion(vi_aipinssus As vi_aipinssus) As respopera
             Try
                 Dim aipinssusController As New aipinssusController
@@ -4440,7 +4441,7 @@ Namespace aipauto.modulos.controlador
                             aipinsencController.modaipinsenc(aipinsenc)
 
                         End If
-                        
+
                         GuardarAipLogeve(vi_aipinssus.idaipinsenc, "SUSCRIPCION")
                     End If
                 Else
@@ -4464,7 +4465,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ProcesarInspeccionSuscripcion(vi_aipinssus As vi_aipinssus) As respopera
             Try
                 Dim aipinssusController As New aipinssusController
@@ -4511,7 +4512,7 @@ Namespace aipauto.modulos.controlador
 
                         If (aipmanveh.xsercarrmanveh = "") Then
                             _error = True
-                            
+
                             _msj = _msj & "<li>El serial de la carroceria es obligatorio.</li>"
                         End If
 
@@ -4619,7 +4620,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function RechazarInspeccionSuscripcion(vi_aipinssus As vi_aipinssus) As respopera
             Try
                 Dim aipinssusController As New aipinssusController
@@ -4670,7 +4671,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CancelarInspeccionSuscripcion(vi_aipinssus As vi_aipinssus) As respopera
             Try
                 Dim aipinssusController As New aipinssusController
@@ -4721,7 +4722,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'busca la lista de fotos por el tamaño original 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ObtenerInspeccionFotoOriginalPorInspeccionEnc(idaipinsenc As Decimal) As List(Of DownloadFilesResultInsFoto)
             Try
 
@@ -4764,28 +4765,28 @@ Namespace aipauto.modulos.controlador
                         'DownloadFilesResultInsFoto.ArchivoByte = Convert.FromBase64String("")
                         _aipainsfoto = New aipinsfoto
                         ObjectMapperManager.DefaultInstance.GetMapper(Of vi_aipinsfoto, aipinsfoto).Map(lista_vi_aipinsfoto(i), _aipainsfoto)
-                        If File.Exists(xruta) Then                            
+                        If File.Exists(xruta) Then
 
                             DownloadFilesResultInsFoto.ArchivoByte = File.ReadAllBytes(xruta)
                             DownloadFilesResultInsFoto.Name = lista_vi_aipinsfoto(i).xnomarchinsfoto
                             DownloadFilesResultInsFoto.Type = System.IO.Path.GetExtension(xruta)
                             DownloadFilesResultInsFoto.aipinsfoto = _aipainsfoto
-                            lista_DownloadFilesResultInsFoto.Add(New DownloadFilesResultInsFoto() With { _
-                .ArchivoByte = DownloadFilesResultInsFoto.ArchivoByte, _
-            .Name = DownloadFilesResultInsFoto.Name, _
-            .Type = DownloadFilesResultInsFoto.Type, _
-            .aipinsfoto = DownloadFilesResultInsFoto.aipinsfoto _
+                            lista_DownloadFilesResultInsFoto.Add(New DownloadFilesResultInsFoto() With {
+                .ArchivoByte = DownloadFilesResultInsFoto.ArchivoByte,
+            .Name = DownloadFilesResultInsFoto.Name,
+            .Type = DownloadFilesResultInsFoto.Type,
+            .aipinsfoto = DownloadFilesResultInsFoto.aipinsfoto
             })
                         Else
                             DownloadFilesResultInsFoto.ArchivoByte = Convert.FromBase64String("")
                             DownloadFilesResultInsFoto.Name = ""
                             DownloadFilesResultInsFoto.Type = ""
                             DownloadFilesResultInsFoto.aipinsfoto = _aipainsfoto
-                            lista_DownloadFilesResultInsFoto.Add(New DownloadFilesResultInsFoto() With { _
-                .ArchivoByte = DownloadFilesResultInsFoto.ArchivoByte, _
-            .Name = DownloadFilesResultInsFoto.Name, _
-            .Type = DownloadFilesResultInsFoto.Type, _
-            .aipinsfoto = DownloadFilesResultInsFoto.aipinsfoto _
+                            lista_DownloadFilesResultInsFoto.Add(New DownloadFilesResultInsFoto() With {
+                .ArchivoByte = DownloadFilesResultInsFoto.ArchivoByte,
+            .Name = DownloadFilesResultInsFoto.Name,
+            .Type = DownloadFilesResultInsFoto.Type,
+            .aipinsfoto = DownloadFilesResultInsFoto.aipinsfoto
             })
                         End If
                     Next
@@ -4796,11 +4797,11 @@ Namespace aipauto.modulos.controlador
                     DownloadFilesResultInsFoto.Type = ""
                     DownloadFilesResultInsFoto.aipinsfoto = _aipainsfoto
 
-                    lista_DownloadFilesResultInsFoto.Add(New DownloadFilesResultInsFoto() With { _
-        .ArchivoByte = DownloadFilesResultInsFoto.ArchivoByte, _
-    .Name = DownloadFilesResultInsFoto.Type, _
-    .Type = DownloadFilesResultInsFoto.Type, _
-    .aipinsfoto = DownloadFilesResultInsFoto.aipinsfoto _
+                    lista_DownloadFilesResultInsFoto.Add(New DownloadFilesResultInsFoto() With {
+        .ArchivoByte = DownloadFilesResultInsFoto.ArchivoByte,
+    .Name = DownloadFilesResultInsFoto.Type,
+    .Type = DownloadFilesResultInsFoto.Type,
+    .aipinsfoto = DownloadFilesResultInsFoto.aipinsfoto
     })
                 End If
 
@@ -4814,10 +4815,10 @@ Namespace aipauto.modulos.controlador
                 DownloadFilesResultInsFoto.Name = ""
                 DownloadFilesResultInsFoto.Type = ""
 
-                lista_DownloadFilesResultInsFoto.Add(New DownloadFilesResultInsFoto() With { _
-    .ArchivoByte = Convert.FromBase64String(""), _
-.Name = "", _
-.Type = "" _
+                lista_DownloadFilesResultInsFoto.Add(New DownloadFilesResultInsFoto() With {
+    .ArchivoByte = Convert.FromBase64String(""),
+.Name = "",
+.Type = ""
 })
 
                 Return lista_DownloadFilesResultInsFoto
@@ -4902,7 +4903,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function EnviarFotosSistemaSir2() As respopera
 
             Dim idaipinsenc As Decimal = 9
@@ -4929,7 +4930,7 @@ Namespace aipauto.modulos.controlador
                 'xrutaimg = ConfigurationManager.AppSettings("xruta") & "\fotosmovil\imagenes" 'esta es para cuando este publicado
                 'xrutaxnombat = ConfigurationManager.AppSettings("xruta") & "\fotosmovil\copiar.bat"
 
-                Dim xnombrefoto As String = ""                
+                Dim xnombrefoto As String = ""
                 'System.IO.Path.GetExtension(xruta)
                 If lista_fotos.Count > 0 Then
 
@@ -5002,7 +5003,7 @@ Namespace aipauto.modulos.controlador
 
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AceptarInspeccionSuscripcion(vi_aipinssus As vi_aipinssus) As respopera
             Try
                 Dim aipinssusController As New aipinssusController
@@ -5054,7 +5055,7 @@ Namespace aipauto.modulos.controlador
                                     End If
                                 End If
 
-                                
+
 
 
                                 ''se valida si los seriales de la carroceria son diferentes
@@ -5068,7 +5069,7 @@ Namespace aipauto.modulos.controlador
                                         _msj = _msj & "El serial de la carroceria no coincide con el original, Original: " & aipinsenc.xsercarrinsenc & " , Nueva: " & aipmanveh.xsercarrmanveh
                                     End If
                                 End If
-                                
+
 
                                 If (_error) Then
                                     respopera.irespuesta = "0"
@@ -5229,7 +5230,7 @@ Namespace aipauto.modulos.controlador
         'End Function
 
         ''Aceptar inspeciones por el id del encabezado realizado para cuando se desea aprobar una inspeccion delde el boton aprobar del grid de Inspeciones por auditar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AceptarInspeccionPorEnc(idaipinsenc As Decimal) As respopera
             Try
 
@@ -5253,7 +5254,7 @@ Namespace aipauto.modulos.controlador
 
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionRestSse(lista_aipinsrestsse As List(Of aipinsrestsse)) As respopera
             Try
                 Dim aipinsrestsseController As New aipinsrestsseController
@@ -5338,7 +5339,7 @@ Namespace aipauto.modulos.controlador
         '        Return respopera
         '    End Try
         'End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionRestSsm(lista_vi_aipinsrestssm As List(Of vi_aipinsrestssm)) As respopera
             Try
                 'Dim aipinsrestssmController As New aipinsrestssmController
@@ -5435,7 +5436,7 @@ Namespace aipauto.modulos.controlador
 
         'End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarInspeccionRestRepuEstadGen(lista_vi_aipinsrestrepuest As List(Of vi_aipinsrestrepuest)) As respopera
             Try
                 ' Dim aipinsrestrepuestController As New aipinsrestrepuestController
@@ -5482,7 +5483,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerSseRestos(idaipinsrest As Decimal) As List(Of vi_aipinsrestsse)
 
             Dim vi_aipinsrestsseController As New vi_aipinsrestsseController
@@ -5504,7 +5505,7 @@ Namespace aipauto.modulos.controlador
         '    Return lista_aipinsrestssm
 
         'End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerSsmRestos(idaipinsrest As Decimal) As List(Of vi_aipinsrestssm)
 
             Dim vi_aipinsrestssmController As New vi_aipinsrestssmController
@@ -5528,7 +5529,7 @@ Namespace aipauto.modulos.controlador
         'End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerRepuestosRestosEstado(idaipinsrest As Decimal) As List(Of vi_aipinsrestrepuest)
 
             Dim vi_aipinsrestrepuestController As New vi_aipinsrestrepuestController
@@ -5541,7 +5542,7 @@ Namespace aipauto.modulos.controlador
 
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarInspeccionRestos(vi_aipinsrest As vi_aipinsrest) As respopera
             Try
                 Dim aipinsrestController As New aipinsrestController
@@ -5611,7 +5612,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ProcesarInspeccionRestos(vi_aipinsrest As vi_aipinsrest) As respopera
             Try
                 Dim aipinsrestController As New aipinsrestController
@@ -5687,7 +5688,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function RechazarInspeccionRestos(vi_aipinsrest As vi_aipinsrest) As respopera
             Try
                 Dim aipinsrestController As New aipinsrestController
@@ -5744,7 +5745,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CancelarInspeccionRestos(vi_aipinsrest As vi_aipinsrest) As respopera
             Try
                 Dim aipinsrestController As New aipinsrestController
@@ -5801,7 +5802,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AceptarInspeccionRestos(vi_aipinsrest As vi_aipinsrest) As respopera
             Try
                 Dim aipinsrestController As New aipinsrestController
@@ -5898,7 +5899,7 @@ Namespace aipauto.modulos.controlador
         'End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarRepuestosSiniestro(lista_vi_aipinssinrepu As List(Of vi_aipinssinrepu)) As respopera
             Try
 
@@ -5959,7 +5960,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarRespuestoSiniestroNuevo(vi_aipinssinrepu As vi_aipinssinrepu) As respopera
             Try
 
@@ -6023,7 +6024,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarManoObraSiniestro(lista_vi_aipinssinmobr As List(Of vi_aipinssinmobr)) As respopera
             Try
 
@@ -6083,7 +6084,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarManoObraSiniestroNuevo(vi_aipinssinmobr As vi_aipinssinmobr) As respopera
             Try
 
@@ -6141,7 +6142,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarInspeccionSiniestro(vi_aipinssin As vi_aipinssin) As respopera
             Try
                 Dim aipinssinController As New aipinssinController
@@ -6211,7 +6212,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ProcesarInspeccionSiniestro(vi_aipinssin As vi_aipinssin) As respopera
             Try
                 Dim aipinssinController As New aipinssinController
@@ -6401,7 +6402,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function RechazarInspeccionSiniestro(vi_aipinssin As vi_aipinssin) As respopera
             Try
                 Dim aipinssinController As New aipinssinController
@@ -6456,7 +6457,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CancelarInspeccionSiniestro(vi_aipinssin As vi_aipinssin) As respopera
             Try
                 Dim aipinssinController As New aipinssinController
@@ -6511,7 +6512,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function Sp_ModificarDatosInspeccionSir(idaipinsenc As Decimal) As respopera
 
             Try
@@ -6586,7 +6587,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AceptarInspeccionSiniestro(vi_aipinssin As vi_aipinssin) As respopera
             Try
                 Dim aipinssinController As New aipinssinController
@@ -6786,7 +6787,7 @@ Namespace aipauto.modulos.controlador
         '    End Try
         'End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarRepuestosLimpiezaSuscripcion(lista_vi_aipinslimsusrepu As List(Of vi_aipinslimsusrepu)) As respopera
             Try
                 'Dim aipinslimsusrepuController As New aipinslimsusrepuController
@@ -6836,7 +6837,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerRepuestosLimpiezaSuscripcion(idaipinslimsus As Decimal) As List(Of vi_aipinslimsusrepu)
 
             Dim vi_aipinslimsusrepuController As New vi_aipinslimsusrepuController
@@ -6847,7 +6848,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerPrecioTotalRepuestosLimpiezaSuscripcion(idaipinslimsus As Decimal) As Decimal
 
             Dim vi_aipinslimsusrepuController As New vi_aipinslimsusrepuController
@@ -6858,7 +6859,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMobrLimpiezaSuscripcion(idaipinslimsus As Decimal) As List(Of vi_aipinslimsusmobr)
 
             Dim vi_aipinslimsusmobrController As New vi_aipinslimsusmobrController
@@ -6869,7 +6870,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerPrecioTotalMobrLimpiezaSuscripcion(idaipinslimsus As Decimal) As Decimal
 
             Dim vi_aipinslimsusmobrController As New vi_aipinslimsusmobrController
@@ -6957,7 +6958,7 @@ Namespace aipauto.modulos.controlador
         'End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarRepuestosLimpiezaSiniestro(lista_vi_aipinslimsinrepu As List(Of vi_aipinslimsinrepu)) As respopera
             Try
                 'Dim aipinslimsinrepuController As New aipinslimsinrepuController
@@ -7006,7 +7007,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarInspeccionLimpiezaSuscripcion(vi_aipinslimsus As vi_aipinslimsus) As respopera
             Try
                 Dim aipinslimsusController As New aipinslimsusController
@@ -7073,7 +7074,7 @@ Namespace aipauto.modulos.controlador
                 Return respopera
             End Try
         End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarMobrsLimpiezaSuscripcion(lista_vi_aipinslimsusmobr As List(Of vi_aipinslimsusmobr)) As respopera
             Try
                 'Dim aipinslimsusmobrController As New aipinslimsusmobrController
@@ -7123,7 +7124,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ProcesarInspeccionLimpiezaSuscripcion(vi_aipinslimsus As vi_aipinslimsus) As respopera
             Try
                 Dim aipinslimsusController As New aipinslimsusController
@@ -7197,7 +7198,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function RechazarInspeccionLimpiezaSuscripcion(vi_aipinslimsus As vi_aipinslimsus) As respopera
             Try
                 Dim aipinslimsusController As New aipinslimsusController
@@ -7252,7 +7253,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CancelarInspeccionLimpiezaSuscripcion(vi_aipinslimsus As vi_aipinslimsus) As respopera
             Try
                 Dim aipinslimsusController As New aipinslimsusController
@@ -7307,7 +7308,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AceptarInspeccionLimpiezaSuscripcion(vi_aipinslimsus As vi_aipinslimsus) As respopera
             Try
                 Dim aipinslimsusController As New aipinslimsusController
@@ -7361,7 +7362,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarInspeccionLimpiezaSiniestro(vi_aipinslimsin As vi_aipinslimsin) As respopera
             Try
                 Dim aipinslimsinController As New aipinslimsinController
@@ -7430,7 +7431,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ProcesarInspeccionLimpiezaSiniestro(vi_aipinslimsin As vi_aipinslimsin) As respopera
             Try
                 Dim aipinslimsinController As New aipinslimsinController
@@ -7504,7 +7505,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function RechazarInspeccionLimpiezaSiniestro(vi_aipinslimsin As vi_aipinslimsin) As respopera
             Try
                 Dim aipinslimsinController As New aipinslimsinController
@@ -7559,7 +7560,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CancelarInspeccionLimpiezaSiniestro(vi_aipinslimsin As vi_aipinslimsin) As respopera
             Try
                 Dim aipinslimsinController As New aipinslimsinController
@@ -7614,7 +7615,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AceptarInspeccionLimpiezaSiniestro(vi_aipinslimsin As vi_aipinslimsin) As respopera
             Try
                 Dim aipinslimsinController As New aipinslimsinController
@@ -7668,7 +7669,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarMobrsLimpiezaSiniestro(lista_vi_aipinslimsinmobr As List(Of vi_aipinslimsinmobr)) As respopera
             Try
                 'Dim aipinslimsinmobrController As New aipinslimsinmobrController
@@ -7717,7 +7718,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerRepuestosLimpiezaSiniestro(idaipinslimsin As Decimal) As List(Of vi_aipinslimsinrepu)
 
             Dim vi_aipinslimsinrepuController As New vi_aipinslimsinrepuController
@@ -7728,7 +7729,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerRepuestosSiniestro(idaipinssin As Decimal) As List(Of vi_aipinssinrepu)
 
             Dim vi_aipinssinrepuController As New vi_aipinssinrepuController
@@ -7739,7 +7740,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerPrecioTotalRepuestosLimpiezaSiniestro(idaipinslimsin As Decimal) As Decimal
 
             Dim vi_aipinslimsinrepuController As New vi_aipinslimsinrepuController
@@ -7750,7 +7751,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMobrLimpiezaSiniestro(idaipinslimsin As Decimal) As List(Of vi_aipinslimsinmobr)
 
             Dim vi_aipinslimsinmobrController As New vi_aipinslimsinmobrController
@@ -7761,7 +7762,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMobrSiniestro(idaipinssin As Decimal) As List(Of vi_aipinssinmobr)
 
             Dim vi_aipinssinmobrController As New vi_aipinssinmobrController
@@ -7772,7 +7773,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerPrecioTotalMobrLimpiezaSiniestro(idaipinslimsin As Decimal) As Decimal
 
             Dim vi_aipinslimsinmobrController As New vi_aipinslimsinmobrController
@@ -7822,7 +7823,7 @@ Namespace aipauto.modulos.controlador
         '        Return respopera
         '    End Try
         'End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarRepuestosAjusteSiniestro(lista_vi_aipinsajussinrepu As List(Of vi_aipinsajussinrepu)) As respopera
             Try
                 'Dim aipinsajussinrepuController As New aipinsajussinrepuController
@@ -7871,8 +7872,8 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
-        Public Function ObtenerRepuestosAjusteSiniestro(idaipinsajussin As Decimal) As List(Of vi_aipinsajussinrepu)            
+        <HttpPost()>
+        Public Function ObtenerRepuestosAjusteSiniestro(idaipinsajussin As Decimal) As List(Of vi_aipinsajussinrepu)
 
             Dim vi_aipinsajussinrepuController As New vi_aipinsajussinrepuController
             Dim lista_vi_aipinsajussinrepu As List(Of vi_aipinsajussinrepu) = vi_aipinsajussinrepuController.selvi_aipinsajussinrepuxidaipinsajussin(idaipinsajussin)
@@ -7882,7 +7883,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerPrecioTotalRepuestosAjusteSiniestro(idaipinsajussin As Decimal) As Decimal
 
             Dim vi_aipinsajussinrepuController As New vi_aipinsajussinrepuController
@@ -7893,8 +7894,8 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
-        Public Function ObtenerMobrAjusteSiniestro(idaipinsajussin As Decimal) As List(Of vi_aipinsajussinmobr)                        
+        <HttpPost()>
+        Public Function ObtenerMobrAjusteSiniestro(idaipinsajussin As Decimal) As List(Of vi_aipinsajussinmobr)
 
             Dim vi_aipinsajussinmobrController As New vi_aipinsajussinmobrController
             Dim lista_vi_aipinsajussinmobr As List(Of vi_aipinsajussinmobr) = vi_aipinsajussinmobrController.selvi_aipinsajussinmobrxidaipinsajussin(idaipinsajussin)
@@ -7904,7 +7905,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMobrAjusteSiniestroXRepuesto(idaipinsajussin As Decimal, idaipinsenc As Decimal, idaipmanrepu As Decimal) As List(Of vi_aipinsajussinmobr)
 
             Dim vi_aipinsajussinmobrController As New vi_aipinsajussinmobrController
@@ -7915,7 +7916,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerPrecioTotalMobrAjusteSiniestro(idaipinsajussin As Decimal) As Decimal
 
             Dim vi_aipinsajussinmobrController As New vi_aipinsajussinmobrController
@@ -7926,7 +7927,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMobrAjusteSiniestroAgrup(idaipinsajussin As Decimal) As List(Of vi_aipinsajussinmobragrup)
 
             Dim vi_aipinsajussinmobragrupController As New vi_aipinsajussinmobragrupController
@@ -7937,7 +7938,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMobrAjusteAnexoAgrup(idaipinsajusanex As Decimal) As List(Of vi_aipinsajusanexmobragrup)
 
             Dim vi_aipinsajusanexmobragrupController As New vi_aipinsajusanexmobragrupController
@@ -7948,7 +7949,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMobrAjusteAnexoXRepuesto(idaipinsajusanex As Decimal, idaipinsenc As Decimal, idaipmanrepu As Decimal) As List(Of vi_aipinsajusanexmobr)
 
             Dim vi_aipinsajusanexmobrController As New vi_aipinsajusanexmobrController
@@ -7996,7 +7997,7 @@ Namespace aipauto.modulos.controlador
         '    End Try
         'End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarMobrsAjusteSiniestro(lista_vi_aipinsajussinmobr As List(Of vi_aipinsajussinmobr)) As respopera
             Try
                 'Dim aipinsajussinmobrController As New aipinsajussinmobrController
@@ -8045,7 +8046,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarInspeccionAjusteSiniestro(vi_aipinsajussin As vi_aipinsajussin) As respopera
             Try
                 Dim aipinsajussinController As New aipinsajussinController
@@ -8115,7 +8116,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ProcesarInspeccionAjusteSiniestro(vi_aipinsajussin As vi_aipinsajussin) As respopera
             Try
                 Dim aipinsajussinController As New aipinsajussinController
@@ -8189,7 +8190,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function RechazarInspeccionAjusteSiniestro(vi_aipinsajussin As vi_aipinsajussin) As respopera
             Try
                 Dim aipinsajussinController As New aipinsajussinController
@@ -8244,7 +8245,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CancelarInspeccionAjusteSiniestro(vi_aipinsajussin As vi_aipinsajussin) As respopera
             Try
                 Dim aipinsajussinController As New aipinsajussinController
@@ -8299,7 +8300,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AceptarInspeccionAjusteSiniestro(vi_aipinsajussin As vi_aipinsajussin) As respopera
             Try
                 Dim aipinsajussinController As New aipinsajussinController
@@ -8390,7 +8391,7 @@ Namespace aipauto.modulos.controlador
         '        Return respopera
         '    End Try
         'End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarRepuestosAjusteAnexo(lista_vi_aipinsajusanexrepu As List(Of vi_aipinsajusanexrepu)) As respopera
             Try
                 'Dim aipinsajusanexrepuController As New aipinsajusanexrepuController
@@ -8439,7 +8440,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerRepuestosAjusteAnexo(idaipinsajusanex As Decimal) As List(Of vi_aipinsajusanexrepu)
 
             Dim vi_aipinsajusanexrepuController As New vi_aipinsajusanexrepuController
@@ -8450,7 +8451,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerPrecioTotalRepuestosAjusteAnexo(idaipinsajusanex As Decimal) As Decimal
 
             Dim vi_aipinsajusanexrepuController As New vi_aipinsajusanexrepuController
@@ -8462,7 +8463,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMobrAjusteAnexo(idaipinsajusanex As Decimal) As List(Of vi_aipinsajusanexmobr)
 
             Dim vi_aipinsajusanexmobrController As New vi_aipinsajusanexmobrController
@@ -8473,7 +8474,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerPrecioTotalMobrAjusteAnexo(idaipinsajusanex As Decimal) As Decimal
 
             Dim vi_aipinsajusanexmobrController As New vi_aipinsajusanexmobrController
@@ -8523,7 +8524,7 @@ Namespace aipauto.modulos.controlador
         'End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarMobrsAjusteAnexo(lista_vi_aipinsajusanexmobr As List(Of vi_aipinsajusanexmobr)) As respopera
             Try
                 'Dim aipinsajusanexmobrController As New aipinsajusanexmobrController
@@ -8572,7 +8573,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarInspeccionAjusteAnexo(vi_aipinsajusanex As vi_aipinsajusanex) As respopera
             Try
                 Dim aipinsajusanexController As New aipinsajusanexController
@@ -8641,7 +8642,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ProcesarInspeccionAjusteAnexo(vi_aipinsajusanex As vi_aipinsajusanex) As respopera
             Try
                 Dim aipinsajusanexController As New aipinsajusanexController
@@ -8689,7 +8690,7 @@ Namespace aipauto.modulos.controlador
                             respopera.xmsjusuario = "Debe enviar fotos desde la app móvil para poder enviar la inspección."
                             respopera.xmsjtecnico = "Debe enviar fotos desde la app móvil para poder enviar la inspección."
                         End If
-                        
+
 
                     End If
 
@@ -8714,7 +8715,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function RechazarInspeccionAjusteAnexo(vi_aipinsajusanex As vi_aipinsajusanex) As respopera
             Try
                 Dim aipinsajusanexController As New aipinsajusanexController
@@ -8769,7 +8770,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CancelarInspeccionAjusteAnexo(vi_aipinsajusanex As vi_aipinsajusanex) As respopera
             Try
                 Dim aipinsajusanexController As New aipinsajusanexController
@@ -8823,7 +8824,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'desarrollar metodo veriricar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AceptarInspeccionAjusteAnexo(vi_aipinsajusanex As vi_aipinsajusanex) As respopera
             Try
                 Dim aipinsajusanexController As New aipinsajusanexController
@@ -8877,7 +8878,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarInspeccionEstatus(idaipinsenc As Decimal, iestatinsenc As String) As respopera
             Try
                 Dim aipinsencController As New aipinsencController
@@ -8903,7 +8904,7 @@ Namespace aipauto.modulos.controlador
 
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarInspeccionEstatusYTipoAccion(idaipinsenc As Decimal, iestatinsenc As String, itipoaccion As String) As respopera
             Try
                 Dim vi_aipinsencController As New vi_aipinsencController
@@ -8967,7 +8968,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarInspeccionConDistribucionAutomaticaAuditores(idaipinsenc As Decimal) As respopera
             Try
                 Dim vi_aipinsencController As New vi_aipinsencController
@@ -9107,7 +9108,7 @@ Namespace aipauto.modulos.controlador
 
         '---ACTAULIZAR------------
         'metodos para los actualizar
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsSusMotiv(vi_aipinssusmotiv As vi_aipinssusmotiv) As respopera
             Try
                 Dim aipinssusmotiv As New aipinssusmotiv
@@ -9129,7 +9130,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsSinMotiv(vi_aipinssinmotiv As vi_aipinssinmotiv) As respopera
             Try
 
@@ -9158,7 +9159,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsSusRepuest(vi_aipinssusrepuest As vi_aipinssusrepuest) As respopera
             Try
 
@@ -9181,7 +9182,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsSusAcc(vi_aipinssusacc As vi_aipinssusacc) As respopera
             Try
 
@@ -9206,7 +9207,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsSusInfComp(vi_aipinssusinfcomp As vi_aipinssusinfcomp) As respopera
             Try
                 Dim aipinssusinfcomp As New aipinssusinfcomp
@@ -9230,7 +9231,7 @@ Namespace aipauto.modulos.controlador
 
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsSusSsm(vi_aipinssusssm As vi_aipinssusssm) As respopera
             Try
 
@@ -9253,7 +9254,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsSusSse(vi_aipinssussse As vi_aipinssussse) As respopera
             Try
 
@@ -9276,7 +9277,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsRestSsm(vi_aipinsrestssm As vi_aipinsrestssm) As respopera
             Try
 
@@ -9381,7 +9382,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsRestRepuest(vi_aipinsrestrepuest As vi_aipinsrestrepuest) As respopera
             Try
 
@@ -9531,7 +9532,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsLimsusRepu(vi_aipinslimsusrepu As vi_aipinslimsusrepu) As respopera
             Try
 
@@ -9663,7 +9664,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsLimsusMobr(vi_aipinslimsusmobr As vi_aipinslimsusmobr) As respopera
             Try
 
@@ -9795,7 +9796,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsLimSinRepu(vi_aipinslimsinrepu As vi_aipinslimsinrepu) As respopera
             Try
 
@@ -9927,7 +9928,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsSinRepu(vi_aipinssinrepu As vi_aipinssinrepu) As respopera
             Try
 
@@ -10069,7 +10070,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsSinMObra(vi_aipinssinmobr As vi_aipinssinmobr) As respopera
             Try
 
@@ -10231,7 +10232,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsLimSinMobr(vi_aipinslimsinmobr As vi_aipinslimsinmobr) As respopera
             Try
 
@@ -10363,7 +10364,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsAjusSinRepu(vi_aipinsajussinrepu As vi_aipinsajussinrepu) As respopera
             Try
 
@@ -10495,7 +10496,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsAjusSinMobr(vi_aipinsajussinmobr As vi_aipinsajussinmobr) As respopera
             Try
 
@@ -10627,7 +10628,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsAjusAnexRepu(vi_aipinsajusanexrepu As vi_aipinsajusanexrepu) As respopera
             Try
 
@@ -10759,7 +10760,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarAipInsAjusAnexMobr(vi_aipinsajusanexmobr As vi_aipinsajusanexmobr) As respopera
             Try
 
@@ -10925,7 +10926,7 @@ Namespace aipauto.modulos.controlador
             Return cell
         End Function
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ImprimirInspeccionSuscripcion(idaipinssus As Decimal) As DownloadFilesResult
             Try
 
@@ -11553,7 +11554,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ImprimirInspeccionSuscripcionNuevo(idaipinssus As Decimal, iimprifoto As Boolean) As DownloadFilesResult
             Try
 
@@ -12393,7 +12394,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ImprimirInspeccionSiniestro(idaipinssin As Decimal, iimprifoto As Boolean) As DownloadFilesResult
             Try
 
@@ -13141,7 +13142,7 @@ Namespace aipauto.modulos.controlador
         '        Return DownloadFilesResult
         '    End Try
         'End Function
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ImprimirInspeccionRestos(idaipinsrest As Decimal) As DownloadFilesResult
             Try
 
@@ -14021,7 +14022,7 @@ Namespace aipauto.modulos.controlador
         '    End Try
         'End Function
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ImprimirInspeccionLimpiezaSuscripcion(idaipinslimsus As Decimal) As DownloadFilesResult
             Try
 
@@ -14633,7 +14634,7 @@ Namespace aipauto.modulos.controlador
         '        Return DownloadFilesResult
         '    End Try
         'End Function
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ImprimirInspeccionLimpiezaSiniestro(idaipinslimsin As Decimal) As DownloadFilesResult
             Try
 
@@ -14983,7 +14984,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ImprimirInspeccionAjusteSiniestro(idaipinsajussin As Decimal) As DownloadFilesResult
             Try
 
@@ -16321,7 +16322,7 @@ Namespace aipauto.modulos.controlador
         '        Return DownloadFilesResult
         '    End Try
         'End Function
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ImprimirInspeccionAjusteAnexo(idaipinsajusanex As Decimal) As DownloadFilesResult
             Try
 
@@ -17389,7 +17390,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AgregarMobrLimpiezaSiniestro(idaipmanrepu As Decimal, itipobaremobr As String, itamapiezbaremobr As String, imaterpiezbaremobr As String, aipinslimsinmobr As aipinslimsinmobr) As respopera
             Try
 
@@ -17561,7 +17562,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AgregarMobrLimpiezaSuscripcion(idaipmanrepu As Decimal, itipobaremobr As String, itamapiezbaremobr As String, imaterpiezbaremobr As String, aipinslimsusmobr As aipinslimsusmobr) As respopera
             Try
 
@@ -17733,7 +17734,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AgregarMobrAjusteAnexo(idaipmanrepu As Decimal, itipobaremobr As String, itamapiezbaremobr As String, imaterpiezbaremobr As String, aipinsajusanexmobr As aipinsajusanexmobr) As respopera
             Try
 
@@ -17905,7 +17906,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function AgregarMobrAjusteSiniestro(idaipmanrepu As Decimal, itipobaremobr As String, itamapiezbaremobr As String, imaterpiezbaremobr As String, aipinsajussinmobr As aipinsajussinmobr) As respopera
             Try
 
@@ -18078,7 +18079,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarInspeccionActividad(vi_aipinsenc As vi_aipinsenc) As respopera
             Dim respopera As New respopera
             Try
@@ -18212,7 +18213,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function NumeroAnexoInspeccion(xnumsininsenc As String) As Int16
             Dim respopera As New respopera
             Try
@@ -18231,7 +18232,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function Sp_ObtenerNumeroAjuste(xnumsininsenc) As respopera
 
             Try
@@ -18277,7 +18278,7 @@ Namespace aipauto.modulos.controlador
 
                 Dim param7 As New Client.OracleParameter
                 param7.OracleDbType = Client.OracleDbType.Varchar2
-                param7.Size = 300                
+                param7.Size = 300
                 param7.Value = xnumsininsenc
                 param7.ParameterName = "p_xnumsininsenc"
 
@@ -18314,7 +18315,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarInspeccionActividad(vi_aipinsenc As vi_aipinsenc) As respopera
             Dim respopera As New respopera
             Try
@@ -18428,7 +18429,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function EliminarInspeccionActividad(idaipinsenc As Decimal, idsegmanusu As Decimal, idsegmanapp As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -18493,7 +18494,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarPeritoInspeccion(vi_aipinsenc As vi_aipinsenc) As respopera
             Dim respopera As New respopera
             Try
@@ -18522,7 +18523,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarAuditorInspeccion(vi_aipinsenc As vi_aipinsenc) As respopera
             Dim respopera As New respopera
             Try
@@ -18551,7 +18552,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerAuditorPorDistribucionAutomatica(idsegmanorg As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -18637,7 +18638,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerAuditorPorDistribucionAutomaticaOracle(idsegmanorg As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -18658,26 +18659,26 @@ Namespace aipauto.modulos.controlador
 
                 Dim param3 As New Client.OracleParameter
                 param3.OracleDbType = Client.OracleDbType.Varchar2
-                param3.Size = 1                
+                param3.Size = 1
                 param3.ParameterName = "p_irespuesta"
                 param3.Direction = ParameterDirection.Output
 
 
                 Dim param4 As New Client.OracleParameter
                 param4.OracleDbType = Client.OracleDbType.Varchar2
-                param4.Size = 300                
+                param4.Size = 300
                 param4.ParameterName = "p_xmsjusuario"
                 param4.Direction = ParameterDirection.Output
 
                 Dim param5 As New Client.OracleParameter
                 param5.OracleDbType = Client.OracleDbType.Varchar2
-                param5.Size = 300                
+                param5.Size = 300
                 param5.ParameterName = "p_xmsjtecnico"
                 param5.Direction = ParameterDirection.Output
 
                 Dim param6 As New Client.OracleParameter
                 param6.OracleDbType = Client.OracleDbType.Varchar2
-                param6.Size = 300                
+                param6.Size = 300
                 param6.ParameterName = "p_coderrorlog"
                 param6.Direction = ParameterDirection.Output
 
@@ -18723,7 +18724,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function VerificarExistenciaFotosPeritaje(idaipinsenc As Decimal) As Boolean
             Dim respopera As New respopera
             Try
@@ -18769,7 +18770,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarAuditorMasivo(idsegmanusuaudit As Decimal, idsegmanusu As Decimal, list_vi_aipinsenc As List(Of vi_aipinsenc)) As respopera
             Dim respopera As New respopera
             Try
@@ -18838,7 +18839,7 @@ Namespace aipauto.modulos.controlador
             End Try
 
         End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarAuditorInspeccionTodo(idsegmanusuaudit As Decimal, idsegmanusu As Decimal, list_vi_aipinsenc As List(Of vi_aipinsenc)) As respopera
             Dim respopera As New respopera
             Try
@@ -18908,7 +18909,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarPeritoMasivo(idsegmanusuperit As Decimal, idsegmanusu As Decimal, list_vi_aipinsenc As List(Of vi_aipinsenc)) As respopera
             Dim respopera As New respopera
             Try
@@ -18977,7 +18978,7 @@ Namespace aipauto.modulos.controlador
             End Try
 
         End Function
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarPeritoInspeccionTodo(idsegmanusuperit As Decimal, idsegmanusu As Decimal, list_vi_aipinsenc As List(Of vi_aipinsenc)) As respopera
             Dim respopera As New respopera
             Try
@@ -19047,7 +19048,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CrearIntermediacionExterna(idaipinsintext As Integer, xnumsininsenc As Decimal, xplacinsenc As String, xsermotinsenc As String, iestatus As String, idsegmanusuperit As Decimal, ncotizacion As Integer, xtipo_operacion As String, idsegmanorg As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -19219,7 +19220,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CrearIntermediacionExternaOracle(idaipinsintext As Integer, xnumsininsenc As Decimal, xplacinsenc As String, xsermotinsenc As String, iestatus As String, idsegmanusuperit As Decimal, ncotizacion As Integer, xtipo_operacion As String, idsegmanorg As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -19433,11 +19434,11 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarIntermediacionExterna(idtabla As Integer, xnumsininsenc As Integer, xplacinsenc As String, xsermotinsenc As String, iestatus As String, idsegmanusuperit As Decimal, ncotizacion As Integer, xtipo_operacion As String, idsegmanorg As Decimal) As respopera
             Dim respopera As New respopera
             Try
-                If ConfigurationManager.AppSettings("motoddb") = "sql" Then                
+                If ConfigurationManager.AppSettings("motoddb") = "sql" Then
                     'se realiza la busqueda del usuario perito para obtener su nombre 
                     Dim vi_segusudetperf2Controller As New vi_segusudetperf2Controller
 
@@ -19604,7 +19605,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarIntermediacionExternaOracle(idtabla As Decimal, xnumsininsenc As Integer, xplacinsenc As String, xsermotinsenc As String, iestatus As String, idsegmanusuperit As Decimal, ncotizacion As Integer, xtipo_operacion As String, idsegmanorg As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -19811,7 +19812,7 @@ Namespace aipauto.modulos.controlador
 
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarEstatusIntermediacionExterna(idtabla As Integer, iestatus As String, idsegmanusu As Decimal, xnomperito As String) As respopera
             Dim respopera As New respopera
             Try
@@ -19911,7 +19912,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ModificarEstatusIntermediacionExternaOracle(idtabla As Integer, iestatus As String, idsegmanusuperit As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -20548,7 +20549,7 @@ Namespace aipauto.modulos.controlador
         'End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerSuscripcionInfComplementaria(idaipinssus As Decimal) As List(Of vi_aipinssusinfcomp)
 
             Dim vi_aipinssusinfcompController As New vi_aipinssusinfcompController
@@ -20559,7 +20560,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function SubirArchivoInspeccion(idaipinsenc As Decimal, idsegmanusu As Decimal, UploadFilesResult As UploadFilesResult) As respopera
 
             Dim respopera As New respopera
@@ -20698,7 +20699,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
         'intermediacion
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerInspeccionesIntermediacion(petivi_intermediacionpaglist As petivi_intermediacionpaglist) As respvi_intermediacionpaglist
             Dim respvi_intermediacionpaglist As respvi_intermediacionpaglist
             Dim vi_intermediacionController As New vi_intermediacionController
@@ -20707,7 +20708,7 @@ Namespace aipauto.modulos.controlador
             Return respvi_intermediacionpaglist
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerInpeccionesIntermediacionPendiente(petivi_intermediacionpaglist As petivi_intermediacionpaglist) As respvi_intermediacionpaglist
             Dim respvi_intermediacionpaglist As respvi_intermediacionpaglist
             Dim vi_intermediacionController As New vi_intermediacionController
@@ -20727,7 +20728,7 @@ Namespace aipauto.modulos.controlador
             Return respvi_intermediacionpaglist
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerInpeccionesIntermediacionAsignada(petivi_intermediacionpaglist As petivi_intermediacionpaglist) As respvi_intermediacionpaglist
             Dim respvi_intermediacionpaglist As respvi_intermediacionpaglist
             Dim vi_intermediacionController As New vi_intermediacionController
@@ -20747,7 +20748,7 @@ Namespace aipauto.modulos.controlador
             Return respvi_intermediacionpaglist
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function TotalInspeccionesIntermediacion() As aipinstotalpers
             Try
                 Dim aipinstotalpers As New aipinstotalpers
@@ -20764,7 +20765,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ExisteInspeccionPorAgendar(idintermediacion As Decimal) As respopera
             Try
                 Dim respopera As New respopera
@@ -20793,7 +20794,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerPlacasIntermediacionPendiente() As List(Of comunconfvalor)
             Dim lista_comunconfvalor As New List(Of comunconfvalor)
             Dim comunconfvalor As New comunconfvalor
@@ -20825,7 +20826,7 @@ Namespace aipauto.modulos.controlador
             Return lista_comunconfvalor
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerDatosInspeccionRector(idaipinsintext As Decimal) As vi_aipinsenc
             Dim respopera As New respopera
             Try
@@ -20852,7 +20853,7 @@ Namespace aipauto.modulos.controlador
                 Dim param4 As New Client.OracleParameter
                 param4.OracleDbType = Client.OracleDbType.Decimal
                 param4.Value = idaipinsintext
-                param4.ParameterName = "p_idtabla"                
+                param4.ParameterName = "p_idtabla"
 
                 Dim param5 As New Client.OracleParameter
                 param5.OracleDbType = Client.OracleDbType.Varchar2
@@ -21014,8 +21015,8 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
-        Public Function ObtenerIdManRepuestoInternoPorIdExterno(idrepuext As Decimal) As Decimal            
+        <HttpPost()>
+        Public Function ObtenerIdManRepuestoInternoPorIdExterno(idrepuext As Decimal) As Decimal
             Try
 
                 Dim param1 As New Client.OracleParameter 'devuelve el estatus de la operacion 1=exitoso sino error en el proceso 0 =error en todo, 2 =error el algunos pasos
@@ -21060,8 +21061,8 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
-        Public Function ObtenerIdExternoPorIdManRepuestoInterno(idaipmanrepu As Decimal) As Decimal            
+        <HttpPost()>
+        Public Function ObtenerIdExternoPorIdManRepuestoInterno(idaipmanrepu As Decimal) As Decimal
             Try
 
                 Dim param1 As New Client.OracleParameter 'devuelve el estatus de la operacion 1=exitoso sino error en el proceso 0 =error en todo, 2 =error el algunos pasos
@@ -21106,8 +21107,8 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
-        Public Function ObtenerRepuestoPorIdExterno(idrepuext As Decimal) As aipmanrepu            
+        <HttpPost()>
+        Public Function ObtenerRepuestoPorIdExterno(idrepuext As Decimal) As aipmanrepu
             Dim _aipmanrepu As New aipmanrepu
             If idrepuext > 0 Then
                 _aipmanrepu.idaipmanrepu = ObtenerIdManRepuestoInternoPorIdExterno(idrepuext)
@@ -21126,7 +21127,7 @@ Namespace aipauto.modulos.controlador
         'fin intermediacion
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerInspeccionesXauditar(petivi_aipinsencpaglist As petivi_aipinsencpaglist) As respvi_aipinsencpaglist
 
             Dim vi_aipinsencController As New vi_aipinsencController
@@ -21156,7 +21157,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerLogEvePorEnc(idaipinsenc As Decimal) As List(Of aiplogeve)
 
             Dim aiplogeveController As New aiplogeveController
@@ -21170,7 +21171,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerBaremoManoDeObra(idsegmanusu As Decimal, idaipinsenc As Decimal, idaipmanrepu As Decimal, itidainssinmobr As String) As respopera
 
 
@@ -21200,7 +21201,7 @@ Namespace aipauto.modulos.controlador
             Return respopera
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function Sp_ObtenerBaremoManoDeObra(idsegmanusu As Decimal, idaipinsenc As Decimal, idaipmanrepu As Decimal, itidainssinmobr As String) As respopera
 
             Try
@@ -21306,7 +21307,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarManoObraConBaremo(aipinssinmobr As aipinssinmobr) As respopera
 
             Try
@@ -21362,7 +21363,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarRepuestoConBaremo(aipinssinrepu As aipinssinrepu) As respopera
 
             Try
@@ -21419,7 +21420,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function Sp_TranferenciaCierreInspeccion(idsegmanusu As Decimal, IDTABLA As Decimal, itipoinsenc As String) As respopera
 
             Try
@@ -21552,7 +21553,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function Sp_ObtenerDatosDeclaracion(idsegmanusu As Decimal, idaipinsenc As Decimal) As peraipdatosdeclara
 
             Try
@@ -21635,7 +21636,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarSiniestro(persaipinssini As persaipinssini) As respopera
             Dim respopera As New respopera
             Dim xmsj As String = ""
@@ -21858,7 +21859,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarSiniestroSuscripcion(persaipinssinicotiz As persaipinssinicotiz) As respopera
             Dim respopera As New respopera
             Dim xmsj As String = ""
@@ -21967,7 +21968,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GenerarSiniestro2(persaipinssinicotiz As persaipinssinicotiz) As respopera
             Dim respopera As New respopera
             Dim xmsj As String = ""
@@ -22111,7 +22112,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GenerarSuscripcion(persaipinssinicotiz As persaipinssinicotiz) As respopera
             Dim respopera As New respopera
             Dim xmsj As String = ""
@@ -22256,7 +22257,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerVideosPorIdEnc(idaipinsenc As Decimal) As List(Of datosfoto)
             Dim respopera As New respopera
             Dim xmsj As String = ""
@@ -22289,8 +22290,8 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpGet()> _
-        <HttpPost()> _
+        <HttpGet()>
+        <HttpPost()>
         Public Function ObtenerInspeccionArchivoPorInsEncYTipo(idaipinsenc As Decimal, itipoinsarch As String) As List(Of vi_aipinsarch)
 
             Dim lista_vi_aipinsarch As New List(Of vi_aipinsarch)
@@ -22306,8 +22307,8 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
-        <HttpGet()> _
+        <HttpPost()>
+        <HttpGet()>
         Public Function ObtenerInspeccionArchivoPorid(idaipinsarch As Decimal) As vi_aipinsarch
 
             Dim vi_aipinsarch As New vi_aipinsarch
@@ -22320,15 +22321,15 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
-       <HttpGet()> _
+        <HttpPost()>
+        <HttpGet()>
         Public Function EliminarArchivoPoridArch(idaipinsarch As Decimal) As respopera
 
 
             Dim respopera As New respopera
             Try
 
-           
+
                 Dim aipinsarchController As New aipinsarchController
                 Dim aipinsarch As aipinsarch = aipinsarchController.selaipinsarchxid(idaipinsarch)
 
@@ -22365,7 +22366,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ObtenerArchivoAipinsarchPorid(idaipinsarch As Decimal) As DownloadFilesResult
 
             Dim vi_aipinsarch As New vi_aipinsarch
@@ -22398,7 +22399,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpGet()> _
+        <HttpGet()>
         Public Function ObtenerInspecionAudioPorEnc(idaipinsenc As Decimal) As List(Of DownloadFilesResult)
 
             Dim lista_DownloadFilesResult As New List(Of DownloadFilesResult)
@@ -22439,7 +22440,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerInspEncMovil(idaipinsenc As Decimal) As agendamovil
             Dim fecha_start As New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0)
             '
@@ -22484,7 +22485,7 @@ Namespace aipauto.modulos.controlador
             Return agendamovil
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerInspSinVehMovilPorIdEnc(idaipinsenc As Decimal) As sinmanvehmovil
             Dim fecha_start As New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0)
             '
@@ -22515,7 +22516,7 @@ Namespace aipauto.modulos.controlador
                         .xdescinssin = vi_aipinssin.xdescinssin.Trim()
                     End If
 
-                    
+
 
 
                     If (vi_aipmanveh IsNot Nothing) Then
@@ -22534,7 +22535,7 @@ Namespace aipauto.modulos.controlador
                         .xsercarrmanveh = vi_aipmanveh.xsercarrmanveh
                         .xsermotmanveh = vi_aipmanveh.xsermotmanveh
                     End If
-                    
+
 
 
                 End With
@@ -22544,7 +22545,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarSinYMantVehiculo(idaipinssin As Decimal, xnombreusuario As String, xplacamanveh As String, xsercarrmanveh As String, nkiloinssin As String, idaipinssinmotiv As String) As respopera
             Dim respopera As New respopera
             Try
@@ -22623,7 +22624,7 @@ Namespace aipauto.modulos.controlador
                                     respopera.xmsjtecnico = "ERR-NMOT01: Algunos datos no fueron almacenados (Motivo)."
                                 End If
 
-                               
+
                             Else
                                 respopera.irespuesta = "0"
                                 respopera.xmsjusuario = "ERR-MSI01: Ha ocurrido un error al guardar sus datos."
@@ -22660,13 +22661,13 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarManoObraSinMovil(idaipinssin As Decimal, idaipmanrepu As Decimal, itidainssinmobr As String, itipomatinssinmobr As String, ncantinssinmobr As Integer, nprecfininssinmobr As Decimal)
 
             Dim respopera As New respopera
             respopera.irespuesta = "0"
             Try
-                
+
                 Dim _msj As String = ""
                 Dim _count_error As String = 0
                 If (idaipinssin = 0) Then
@@ -22755,7 +22756,7 @@ Namespace aipauto.modulos.controlador
 
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerRepuestosMovil() As List(Of aipgenobj)
 
             Dim lista_aipgenobj = New List(Of aipgenobj)
@@ -22792,7 +22793,7 @@ Namespace aipauto.modulos.controlador
 
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerBaremoPorTipoMovil(idaipinsenc As Decimal, idaipmanrepu As Decimal, itidainssinmobr As String, xnombreusuario As String) As respopera
             Dim respopera As New respopera
             Try
@@ -22819,7 +22820,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMobrSiniestroMovil(idaipinssin As Decimal) As List(Of vi_aipinssinmobr)
 
             Dim vi_aipinssinmobrController As New vi_aipinssinmobrController
@@ -22850,7 +22851,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerRepuestosSiniestroMovil(idaipinssin As Decimal) As List(Of vi_aipinssinrepu)
 
 
@@ -22875,12 +22876,12 @@ Namespace aipauto.modulos.controlador
                 vi_aipinssinrepu.ncantinssinrepu = TotalCantidadRepuestoSinistroPorIdSin(idaipinssin)
                 lista_vi_aipinssinrepu.Add(vi_aipinssinrepu)
             End If
-            
+
             Return lista_vi_aipinssinrepu
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarManoObraSiniestroMovil(vi_aipinssinmobr As vi_aipinssinmobr) As respopera
             Try
                 Dim respopera As New respopera
@@ -22898,7 +22899,7 @@ Namespace aipauto.modulos.controlador
                 Dim lugar As String = "ActualizarRepuestosSiniestroMovil: " & vi_aipinssinmobr.idaipinssin
                 log_errores(lugar, xrutaraiz)
 
-                
+
 
 
                 Dim respopera2 As respopera
@@ -22928,7 +22929,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarManoObraCantPrecioSiniestroMovil(idaipinssinmobr As Decimal, idaipinssin As Decimal, ncantinssinmobr As Int16, nprecfininssinmobr As Decimal) As respopera
             Try
                 Dim respopera As New respopera
@@ -23002,11 +23003,11 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarRepuestosSiniestroMovil(vi_aipinssinrepu As vi_aipinssinrepu) As respopera
             Try
 
-                
+
                 Dim respopera As New respopera
                 Dim canterror As Integer = 0
                 Dim cantsuccess As Integer = 0
@@ -23040,67 +23041,67 @@ Namespace aipauto.modulos.controlador
 
 
         ''suscripcion MOVIL
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerInspSusVehMovilPorIdEnc(idaipinsenc As Decimal) As susmanvehmovil
 
             Try
 
-            
-            '
-            Dim vi_aipinssusController As New vi_aipinssusController
-            Dim comunconfvalorController As New comunconfvalorController
 
-            Dim vi_aipinssus As vi_aipinssus = vi_aipinssusController.selvi_aipinssusxidinsenc(idaipinsenc)
-            Dim susmanvehmovil As New susmanvehmovil
-            Dim comunconfvalor As comunconfvalor
-            If (vi_aipinssus IsNot Nothing) Then
+                '
+                Dim vi_aipinssusController As New vi_aipinssusController
+                Dim comunconfvalorController As New comunconfvalorController
 
-                ''se busca el mantenimiento de vehiculo por suscripcion
-                Dim vi_aipmanvehController As New vi_aipmanvehController
-                Dim vi_aipmanveh As vi_aipmanveh = vi_aipmanvehController.selvi_aipmanvehxid(vi_aipinssus.idaipmanveh)
+                Dim vi_aipinssus As vi_aipinssus = vi_aipinssusController.selvi_aipinssusxidinsenc(idaipinsenc)
+                Dim susmanvehmovil As New susmanvehmovil
+                Dim comunconfvalor As comunconfvalor
+                If (vi_aipinssus IsNot Nothing) Then
+
+                    ''se busca el mantenimiento de vehiculo por suscripcion
+                    Dim vi_aipmanvehController As New vi_aipmanvehController
+                    Dim vi_aipmanveh As vi_aipmanveh = vi_aipmanvehController.selvi_aipmanvehxid(vi_aipinssus.idaipmanveh)
 
 
 
-                With susmanvehmovil
+                    With susmanvehmovil
 
-                    .idaipinssus = vi_aipinssus.idaipinssus
-                    .idaipinsmotiv = vi_aipinssus.idaipinsmotiv
-                    .xnominsmotiv = vi_aipinssus.xnominsmotiv
-                    .nkiloinssus = vi_aipinssus.nkiloinssus
-                    If (vi_aipinssus.xdescinssus.Trim() <> "") Then
-                        .xdescinssus = vi_aipinssus.xdescinssus.Trim()
-                    Else
-                        .xdescinssus = vi_aipinssus.xdescinssus.Trim()
-                    End If
-
-                    If (vi_aipinssus.xdictinssus.Trim() <> "") Then
-                        .xdictinssus = vi_aipinssus.xdictinssus.Trim()
-                    Else
-                        .xdictinssus = vi_aipinssus.xdictinssus.Trim()
-                    End If
-
-                    If (vi_aipmanveh IsNot Nothing) Then
-                        .xnommanvehmar = vi_aipmanveh.xnommanvehmar
-                        .xnommanvehmod = vi_aipmanveh.xnommanvehmod
-                        .xnommanvehver = vi_aipmanveh.xnommanvehver
-                        .naniomanveh = vi_aipmanveh.naniomanveh
-                        .iclasemanveh = vi_aipmanveh.iclasemanveh
-                        .icolormanveh = vi_aipmanveh.icolormanveh
-                        comunconfvalor = comunconfvalorController.selcomunconfvalorxconceptoYxvalorcodigo("ICOLORMANVEH", vi_aipmanveh.icolormanveh)
-                        If (comunconfvalor IsNot Nothing) Then
-                            .xnomcolor = comunconfvalor.xvalordescripcion
+                        .idaipinssus = vi_aipinssus.idaipinssus
+                        .idaipinsmotiv = vi_aipinssus.idaipinsmotiv
+                        .xnominsmotiv = vi_aipinssus.xnominsmotiv
+                        .nkiloinssus = vi_aipinssus.nkiloinssus
+                        If (vi_aipinssus.xdescinssus.Trim() <> "") Then
+                            .xdescinssus = vi_aipinssus.xdescinssus.Trim()
+                        Else
+                            .xdescinssus = vi_aipinssus.xdescinssus.Trim()
                         End If
 
-                        .xplacamanveh = vi_aipmanveh.xplacamanveh
-                        .xsercarrmanveh = vi_aipmanveh.xsercarrmanveh
-                        .xsermotmanveh = vi_aipmanveh.xsermotmanveh
-                    End If
+                        If (vi_aipinssus.xdictinssus.Trim() <> "") Then
+                            .xdictinssus = vi_aipinssus.xdictinssus.Trim()
+                        Else
+                            .xdictinssus = vi_aipinssus.xdictinssus.Trim()
+                        End If
+
+                        If (vi_aipmanveh IsNot Nothing) Then
+                            .xnommanvehmar = vi_aipmanveh.xnommanvehmar
+                            .xnommanvehmod = vi_aipmanveh.xnommanvehmod
+                            .xnommanvehver = vi_aipmanveh.xnommanvehver
+                            .naniomanveh = vi_aipmanveh.naniomanveh
+                            .iclasemanveh = vi_aipmanveh.iclasemanveh
+                            .icolormanveh = vi_aipmanveh.icolormanveh
+                            comunconfvalor = comunconfvalorController.selcomunconfvalorxconceptoYxvalorcodigo("ICOLORMANVEH", vi_aipmanveh.icolormanveh)
+                            If (comunconfvalor IsNot Nothing) Then
+                                .xnomcolor = comunconfvalor.xvalordescripcion
+                            End If
+
+                            .xplacamanveh = vi_aipmanveh.xplacamanveh
+                            .xsercarrmanveh = vi_aipmanveh.xsercarrmanveh
+                            .xsermotmanveh = vi_aipmanveh.xsermotmanveh
+                        End If
 
 
 
-                End With
-            End If
-            '
+                    End With
+                End If
+                '
                 Return susmanvehmovil
 
             Catch ex As Exception
@@ -23117,7 +23118,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ActualizarSusYMantVehiculo(idaipinssus As Decimal, xnombreusuario As String, xplacamanveh As String, xsercarrmanveh As String, nkiloinssus As String, idaipinssusmotiv As String, icolormanveh As String) As respopera
             Dim respopera As New respopera
             Try
@@ -23235,7 +23236,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarObservacionSuscripcionMovil(aipinssus As aipinssus) As respopera
             Dim respopera As New respopera
             Try
@@ -23273,7 +23274,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarObservacionSiniestroMovil(aipinssin As aipinssin) As respopera
             Dim respopera As New respopera
             Try
@@ -23311,7 +23312,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ProcesarInspeccionSuscripcionMovil(aipinssus As aipinssus) As respopera
             Dim respopera As New respopera
             Try
@@ -23355,7 +23356,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ProcesarInspeccionSiniestroMovil(aipinssin As aipinssin) As respopera
             Dim respopera As New respopera
             Try
@@ -23401,7 +23402,7 @@ Namespace aipauto.modulos.controlador
 
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerRepuestosSuscripcionEstadGenPorColum(idaipinssus As Decimal, numColum As Integer) As List(Of vi_aipinssusrepuest)
 
             Dim vi_aipinssusrepuestController As New vi_aipinssusrepuestController
@@ -23451,7 +23452,7 @@ Namespace aipauto.modulos.controlador
                         _lista_vi_aipinssusrepuestFinal.Add(lista_vi_aipinssusrepuest(countColum))
                         'Else
                         '    continuar = False
-                    
+
                     End If
 
                     If (numColum = 3) Then
@@ -23485,7 +23486,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function EnvioMasivoDeCasosPorPeritoMovil(xnombreusuario As String) As respopera
             Dim respopera As New respopera
             Try
@@ -23632,7 +23633,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarUsuarioConfiguracion(idsegmanusu As Decimal, finisusmanusuconf As DateTime, ffinsusmanusuconf As DateTime, iestatmanusuconf As String) As respopera
             Try
 
@@ -23768,7 +23769,7 @@ Namespace aipauto.modulos.controlador
             End Try
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function VerificarUsuarioSuspendidos() As respopera
             Try
 
@@ -23839,7 +23840,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function EliminarInspeccionPorEnc(idaipinsenc As Decimal, idsegmanusu As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -23946,7 +23947,7 @@ Namespace aipauto.modulos.controlador
         End Function
 
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function SpEliminarInspeccion(idaipinsenc As Decimal, idsegmanusu As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -23974,7 +23975,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function SpEliminarInspeccionoracle(idaipinsenc As Decimal, idsegmanusu As Decimal) As respopera
             Dim respopera As New respopera
             Try
@@ -24058,7 +24059,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerListaDetallesSiniestro(idsegmanorgperit As Decimal, xnumsininsenc As String) As List(Of vi_aipextsintagenda)
 
             Dim vi_aipextsintagendaController As New vi_aipextsintagendaController
@@ -24068,7 +24069,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerListaDetallesSiniestro2(idaipinsenc As Decimal) As List(Of vi_aipextsintagenda)
 
             Dim vi_aipinsencController As New vi_aipinsencController
@@ -24090,7 +24091,7 @@ Namespace aipauto.modulos.controlador
         ''' <param name="idsegmanusuperit"></param>
         ''' <returns></returns>
         ''' <remarks></remarks>
-        <HttpPost()> _
+        <HttpPost()>
         Public Function CrearInspeccionPorAnexo(idsegmanusu As Decimal, idaipinsencAnt As Decimal, idsegmanorgperit As Decimal, idaipinsmotiv As Decimal, idsegmanusuperit As Decimal) As respopera
 
             Dim respopera As respopera
@@ -24243,12 +24244,12 @@ Namespace aipauto.modulos.controlador
         ''' <param name="xnumsininsenc"></param>
         ''' <returns></returns>
         ''' <remarks></remarks>
-        <HttpPost()> _
+        <HttpPost()>
         Public Function VerificarSiEsUltimaInspeccionDelSiniestro(idaipinsencComparar As Decimal, xnumsininsenc As String) As respopera
 
             Dim respopera As New respopera
             respopera.id = 0
-            respopera.irespuesta = "1"            
+            respopera.irespuesta = "1"
             respopera.xmsjusuario = "OK"
             respopera.xmsjtecnico = "OK"
 
@@ -24283,8 +24284,8 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
-        <HttpGet()> _
+        <HttpPost()>
+        <HttpGet()>
         Public Function ObtenerDatosCasosAlmacenadosAPP(nombres As String) As List(Of String)
 
 
@@ -24326,7 +24327,7 @@ Namespace aipauto.modulos.controlador
             Return lista_Datos
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMotivosSuscripcion() As List(Of aipinsmotiv)
 
             Dim aipinsmotivController As New aipinsmotivController
@@ -24337,7 +24338,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMotivosSiniestros() As List(Of aipinsmotiv)
 
             Dim aipinsmotivController As New aipinsmotivController
@@ -24348,7 +24349,7 @@ Namespace aipauto.modulos.controlador
 
         End Function
 
-        <HttpPost()> _
+        <HttpPost()>
         Public Function ObtenerMotivos() As List(Of aipinsmotiv)
 
             Dim aipinsmotivController As New aipinsmotivController
@@ -24367,16 +24368,360 @@ Namespace aipauto.modulos.controlador
         ''' </summary>
         ''' <returns></returns>
         ''' <remarks></remarks>
-        <HttpPost()> _
+        <HttpPost()>
         Public Function GuardarIsnpeccionRiesgoCompleta(inspriesgo As inspriesgo) As respopera
 
-            Dim respopera As New respopera()
+            'Dim respopera As New respopera()
+            'respopera.irespuesta = "1"
+            'respopera.xmsjtecnico = "Falta el proceso en Back-End"
+            'respopera.xmsjusuario = "Ya los campos llegaron para ser procesados, falta la parte fuera de la mobile " + " Nombre " + inspriesgo.nombre
+            'Return respopera
+
+            'Dim inspriesgo As inspriesgo = New inspriesgo()
+
+            Dim respopera As New respopera
             respopera.irespuesta = "1"
-            respopera.xmsjtecnico = "Falta el proceso en Back-End"
-            respopera.xmsjusuario = "Ya los campos llegaron para ser procesados, falta la parte fuera de la mobile " + " Nombre " + inspriesgo.nombre
+            'inspriesgo.idMotivo = "2"
+            'inspriesgo.idSucursal = "3"
+            'inspriesgo.idTipoPersona = "Natural"
+            'inspriesgo.idTipoDocumento = "Cédula"
+            'inspriesgo.cedula = "11111"
+            'inspriesgo.nombre = "Carlos"
+            'inspriesgo.apellido = "Velasquez"
+            'inspriesgo.telefono = "11111"
+            'inspriesgo.correo = "velas@gmail.com"
+            'inspriesgo.placa = "22222"
+            'inspriesgo.serialMotor = "33333"
+            'inspriesgo.serialCarroceria = "44444"
+            'inspriesgo.idMarca = "59"
+            'inspriesgo.idModelo = "1566"
+            'inspriesgo.color = "ROJO"
+            'inspriesgo.kilometraje = "1000"
+            'inspriesgo.anio = "2015"
+            'inspriesgo.usuarioApp = "intermediario@laregional.com"
+
+            Dim xrutaraiz As String = ConfigurationManager.AppSettings("xruta") '
+            Dim lugar As String = "Llego al metodo GuardarIsnpeccionRiesgoCompleta :"
+            log_errores(lugar, xrutaraiz)
+
+            Dim xmsj As String = ""
+            Try
+
+                'lo primero a realizar es las validaciones de campos requeridos
+                ' todos los datos son requeridos
+                If inspriesgo.idSucursal = "0" Then
+                    xmsj = "<li> La Sucursal es Requerida </li>"
+                    respopera.irespuesta = "0"
+                End If
+                If inspriesgo.idMotivo = "0" Then
+                    xmsj = "<li> El motivó es requerido  </li>"
+                    respopera.irespuesta = "0"
+                End If
+                If inspriesgo.idTipoPersona = "" Then
+                    xmsj = xmsj & "<li> El tipo de persona es requerido </li>"
+                    respopera.irespuesta = "0"
+                End If
+                If inspriesgo.idTipoDocumento = "" Then
+                    xmsj = xmsj & "<li> El tipo de documento es requerido</li>"
+                    respopera.irespuesta = "0"
+                End If
+                If inspriesgo.cedula = "" Then
+                    xmsj = xmsj & "<li> Ced. Identidad/R.U.C  es requerido</li>"
+                    respopera.irespuesta = "0"
+                End If
+
+                If inspriesgo.nombre = "" Then
+                    xmsj = xmsj & "<li> El nombre es requerido</li>"
+                    respopera.irespuesta = "0"
+                End If
+
+                If inspriesgo.apellido = "" Then
+                    xmsj = xmsj & "<li> El apellido es requerido</li>"
+                    respopera.irespuesta = "0"
+                End If
+
+                If inspriesgo.telefono = "" Then
+                    xmsj = xmsj & "<li> El teléfono es requerido </li>"
+                    respopera.irespuesta = "0"
+                End If
+
+                If inspriesgo.correo = "" Then
+                    xmsj = xmsj & "<li> El correo es requerido </li>"
+                    respopera.irespuesta = "0"
+                End If
+
+                If inspriesgo.placa = "" Then
+                    xmsj = xmsj & "<li> La placa es Requerida </li>"
+                    respopera.irespuesta = "0"
+                End If
+                If inspriesgo.serialMotor = "" Then
+                    xmsj = xmsj & "<li> El serial del motor es requerido </li>"
+                    respopera.irespuesta = "0"
+                End If
+                If inspriesgo.serialCarroceria = "" Then
+                    xmsj = xmsj & "<li> El serial de la carrocería es requerida </li>"
+                    respopera.irespuesta = "0"
+                End If
+                If inspriesgo.idMarca = "0" Then
+                    xmsj = xmsj & "<li> La marca es Requerida </li>"
+                    respopera.irespuesta = "0"
+                End If
+                If inspriesgo.idModelo = "0" Then
+                    xmsj = xmsj & "<li> El modelo es requerido </li>"
+                    respopera.irespuesta = "0"
+                End If
+                If inspriesgo.color = "" Then
+                    xmsj = xmsj & "<li> El color es requerido </li>"
+                    respopera.irespuesta = "0"
+                End If
+
+                If inspriesgo.kilometraje = "" Then
+                    xmsj = xmsj & "<li> El kilometraje es requerido </li>"
+                    respopera.irespuesta = "0"
+                End If
+
+                If inspriesgo.anio = "" Then
+                    xmsj = xmsj & "<li> El año es Requerido </li>"
+                    respopera.irespuesta = "0"
+                End If
+
+                If inspriesgo.usuarioApp = "" Then
+                    xmsj = xmsj & "<li> El usuario de la APP es Requerido </li>"
+                    respopera.irespuesta = "0"
+                End If
+                respopera.xmsjtecnico = xmsj
+                respopera.xmsjusuario = xmsj
+                lugar = "Llego al metodo GuardarIsnpeccionRiesgoCompleta : Paso las validaciones"
+                log_errores(lugar, xrutaraiz)
+
+                If respopera.irespuesta <> "0" Then
+
+
+                    respopera = GuardarIsnpeccionRiesgoCompletaStored(inspriesgo)
+
+                End If
+
+                Return respopera
+
+            Catch ex As Exception
+                respopera.irespuesta = "0"
+                respopera.xmsjtecnico = ex.Message
+                lugar = "Llego al metodo GuardarIsnpeccionRiesgoCompleta : " + respopera.xmsjtecnico
+                log_errores(lugar, xrutaraiz)
+                AgregarLogErrores("Metodo:GuardarIsnpeccionRiesgoCompleta ", ex)
+                respopera.xmsjusuario = "Error en el proceso, Comuníquese con sistemas"
+                Return respopera
+            End Try
+        End Function
+
+        <HttpPost()>
+        Public Function GuardarIsnpeccionRiesgoCompletaStored(inspriesgo As inspriesgo) As respopera
+            Dim respopera As New respopera
+            Dim xmsj As String = ""
+            Try
+
+                Dim _idMotivo As Decimal = inspriesgo.idMotivo.Replace(".0", "").Replace(",0", "")
+                Dim _idSucursal As Decimal = inspriesgo.idSucursal.Replace(".0", "").Replace(",0", "")
+                Dim _idMarca As Decimal = inspriesgo.idMarca.Replace(".0", "").Replace(",0", "")
+                Dim _idModelo As Decimal = inspriesgo.idModelo.Replace(".0", "").Replace(",0", "")
+                Dim _kilometraje As Integer = inspriesgo.kilometraje
+                Dim _anio As Integer = inspriesgo.anio
+                Dim _idTipoPersona As String = inspriesgo.idTipoPersona
+                Dim _idTipoDocumento As String = inspriesgo.idTipoDocumento
+                Select Case inspriesgo.idTipoPersona
+
+                    Case "Natural"
+                        _idTipoPersona = "N-"
+                    Case Else ' Juridica
+                        _idTipoPersona = "J-"
+                End Select
+                Select Case inspriesgo.idTipoDocumento
+
+                    Case "Cédula"
+                        _idTipoDocumento = "C-"
+                    Case "R.U.C."
+                        _idTipoDocumento = "R-"
+                    Case Else ' Pasaporte
+                        _idTipoDocumento = "P-"
+                End Select
+
+                Dim param1 As New Client.OracleParameter 'devuelve el estatus de la operacion 1=exitoso sino error en el proceso 0 =error en todo, 2 =error el algunos pasos
+                param1.OracleDbType = Client.OracleDbType.Varchar2
+                param1.Size = 1
+                param1.ParameterName = "p_irespuesta"
+                param1.Direction = ParameterDirection.Output
+
+                Dim param2 As New Client.OracleParameter
+                param2.OracleDbType = Client.OracleDbType.Varchar2
+                param2.Size = 300
+                param2.ParameterName = "p_xmsjusuario"
+                param2.Direction = ParameterDirection.Output
+
+                Dim param3 As New Client.OracleParameter
+                param3.OracleDbType = Client.OracleDbType.Varchar2
+                param3.Size = 300
+                param3.ParameterName = "p_xmsjtecnico"
+                param3.Direction = ParameterDirection.Output
+
+                'Paramestros
+                Dim param4 As New Client.OracleParameter
+                param4.OracleDbType = Client.OracleDbType.Decimal
+                param4.Value = _idMotivo
+                param4.ParameterName = "p_idMotivo"
+
+                Dim param5 As New Client.OracleParameter
+                param5.OracleDbType = Client.OracleDbType.Decimal
+                param5.Value = _idSucursal
+                param5.ParameterName = "p_idSucursal"
+
+                Dim param6 As New Client.OracleParameter
+                param6.OracleDbType = Client.OracleDbType.Varchar2
+                param6.Size = 30
+                param6.Value = _idTipoPersona
+                param6.ParameterName = "p_idTipoPersona"
+
+                Dim param7 As New Client.OracleParameter
+                param7.OracleDbType = Client.OracleDbType.Varchar2
+                param7.Size = 30
+                param7.Value = _idTipoDocumento
+                param7.ParameterName = "p_idTipoDocumento"
+
+                Dim param8 As New Client.OracleParameter
+                param8.OracleDbType = Client.OracleDbType.Varchar2
+                param8.Size = 20
+                param8.Value = inspriesgo.cedula
+                param8.ParameterName = "p_cedula"
+
+                Dim param9 As New Client.OracleParameter
+                param9.OracleDbType = Client.OracleDbType.Varchar2
+                param9.Size = 100
+                param9.Value = inspriesgo.nombre
+                param9.ParameterName = "p_nombre"
+
+                Dim param10 As New Client.OracleParameter
+                param10.OracleDbType = Client.OracleDbType.Varchar2
+                param10.Size = 100
+                param10.Value = inspriesgo.apellido
+                param10.ParameterName = "p_apellido"
+
+                Dim param11 As New Client.OracleParameter
+                param11.OracleDbType = Client.OracleDbType.Varchar2
+                param11.Size = 30
+                param11.Value = inspriesgo.telefono
+                param11.ParameterName = "p_telefono"
+
+                Dim param12 As New Client.OracleParameter
+                param12.OracleDbType = Client.OracleDbType.Varchar2
+                param12.Size = 30
+                param12.Value = inspriesgo.correo
+                param12.ParameterName = "p_correo"
+
+                Dim param13 As New Client.OracleParameter
+                param13.OracleDbType = Client.OracleDbType.Varchar2
+                param13.Size = 30
+                param13.Value = inspriesgo.placa
+                param13.ParameterName = "p_placa"
+
+                Dim param14 As New Client.OracleParameter
+                param14.OracleDbType = Client.OracleDbType.Varchar2
+                param14.Size = 30
+                param14.Value = inspriesgo.serialMotor
+                param14.ParameterName = "p_serialMotor"
+
+                Dim param15 As New Client.OracleParameter
+                param15.OracleDbType = Client.OracleDbType.Varchar2
+                param15.Size = 30
+                param15.Value = inspriesgo.serialCarroceria
+                param15.ParameterName = "p_serialCarroceria"
+
+                Dim param16 As New Client.OracleParameter
+                param16.OracleDbType = Client.OracleDbType.Decimal
+                param16.Value = _idMarca
+                param16.ParameterName = "p_idMarca"
+
+                Dim param17 As New Client.OracleParameter
+                param17.OracleDbType = Client.OracleDbType.Decimal
+                param17.Value = _idModelo
+                param17.ParameterName = "p_idModelo"
+
+                Dim param18 As New Client.OracleParameter
+                param18.OracleDbType = Client.OracleDbType.Varchar2
+                param18.Size = 30
+                param18.Value = inspriesgo.color
+                param18.ParameterName = "p_color"
+
+                Dim param19 As New Client.OracleParameter
+                param19.OracleDbType = Client.OracleDbType.Int16
+                param19.Value = _kilometraje
+                param19.ParameterName = "p_kilometraje"
+
+                Dim param20 As New Client.OracleParameter
+                param20.OracleDbType = Client.OracleDbType.Int16
+                param20.Value = _anio
+                param20.ParameterName = "p_anio"
+
+                Dim param21 As New Client.OracleParameter
+                param21.OracleDbType = Client.OracleDbType.Varchar2
+                param21.Size = 100
+                param21.Value = inspriesgo.usuarioApp
+                param21.ParameterName = "p_usuarioApp"
+
+                Dim xdeclare As String = "DECLARE v_p_irespuesta varchar2(32767); v_p_xmsjusuario varchar2(32767); v_p_xmsjtecnico varchar2(32767); v_p_idMotivo float;  v_p_idSucursal float; v_p_idTipoPersona varchar2(300);  v_p_idTipoDocumento varchar2(300); v_p_cedula varchar2(32767); v_p_nombre varchar2(32767);  v_p_apellido varchar2(32767); v_p_telefono varchar2(32767); v_p_correo varchar2(32767); v_p_placa varchar2(32767); v_p_serialMotor varchar2(32767); v_p_serialCarroceria varchar2(32767); v_p_idMarca float; v_p_idModelo float; v_p_color varchar2(32767); v_p_kilometraje Number; v_p_anio Number; v_p_usuarioApp  varchar2(32767);"
+                Dim xsp As String = "begin SP_CREAR_INSP_RIESGO_AGEN(:v_p_irespuesta, :v_p_xmsjusuario, :v_p_xmsjtecnico, :v_p_idMotiv, :v_p_idSucursal, :v_p_idTipoPersona, :v_p_idTipoDocumento, :v_p_cedula, :v_p_nombre, :v_p_apellido, :v_p_telefono, :v_p_correo, :v_p_placa, :v_p_serialMotor, :v_p_serialCarroceria, :v_p_idMarca, :v_p_idModelo, :v_p_color, :v_p_kilometraje, :v_p_anio, :v_p_usuarioApp); end;"
+                Dim f As Integer = _db.ExecuteStoreCommand(xdeclare & xsp, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15, param16, param17, param18, param19, param20, param21)
+                respopera.irespuesta = param1.Value.ToString()
+                respopera.xmsjusuario = param2.Value.ToString()
+                respopera.xmsjtecnico = param3.Value.ToString()
+
+                'respopera.xmsjtecnico = JsonConvert.SerializeObject(inspriesgo)
+                Return respopera
+
+            Catch ex As Exception
+                respopera.irespuesta = "0"
+                respopera.xmsjtecnico = ex.Message
+                Dim xrutaraiz As String = ConfigurationManager.AppSettings("xruta") '
+                log_errores("Llego al metodo GuardarIsnpeccionRiesgoCompletaStored: " + respopera.xmsjtecnico, xrutaraiz)
+                respopera.xmsjusuario = "Error en el proceso, Comuníquese con sistemas"
+                AgregarLogErrores("Metodo:GuardarIsnpeccionRiesgoCompletaStored ", ex)
+                Return respopera
+            End Try
+
+        End Function
+
+        <HttpPost()>
+        Public Function PuedeVerBotonDeLaAppCrearRiesgo2(usuario As String) As Boolean
+            Dim puedeAcceder As Boolean = False
+
+            Dim vi_segmanusuperfController As New vi_segusudetperf2Controller
+            Dim vi_segmanusuperf As vi_segusudetperf2 = vi_segmanusuperfController.selvi_segusudetperf2PorNombreUsuario(usuario)
+
+            If (vi_segmanusuperf.idsegmanperf = 8) Then '8	INT	Intermediario
+                puedeAcceder = True
+            End If
+
+            Return puedeAcceder
+
+        End Function
+
+        <HttpPost()>
+        Public Function PuedeVerBotonDeLaAppCrearRiesgo(usuario As String) As respopera
+
+            Dim respopera As respopera = New respopera()
+
+            Dim vi_segmanusuperfController As New vi_segusudetperf2Controller
+            Dim vi_segmanusuperf As vi_segusudetperf2 = vi_segmanusuperfController.selvi_segusudetperf2PorNombreUsuario(usuario)
+            respopera.xmsjtecnico = ""
+            respopera.xmsjusuario = ""
+            respopera.irespuesta = "0"
+
+            If (vi_segmanusuperf.idsegmanperf = 8) Then '8	INT	Intermediario
+                respopera.irespuesta = "1"
+            End If
+
             Return respopera
 
         End Function
+
 
 
     End Class

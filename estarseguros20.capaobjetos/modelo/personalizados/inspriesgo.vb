@@ -19,6 +19,7 @@
         Private p_color As String
         Private p_kilometraje As String
         Private p_anio As String
+        Private p_usuarioApp As String
 
 
 
@@ -49,7 +50,7 @@
             End Set
         End Property
 
-        Public Property idTipoDocument() As String
+        Public Property idTipoDocumento() As String
             Get
                 Return Me.p_idTipoDocumento
             End Get
@@ -172,6 +173,15 @@
             End Get
             Set(ByVal Value As String)
                 Me.p_anio = Value
+            End Set
+        End Property
+
+        Public Property usuarioApp() As String
+            Get
+                Return Me.p_usuarioApp
+            End Get
+            Set(ByVal Value As String)
+                Me.p_usuarioApp = Value
             End Set
         End Property
 

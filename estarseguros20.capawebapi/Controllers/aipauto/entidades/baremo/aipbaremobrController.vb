@@ -750,20 +750,20 @@ Public Class aipbaremobrController
 	Dim param11 As New SqlClient.SqlParameter
 	param11.SqlDbType = SqlDbType.varchar
 	param11.Size = 50
-	param11.Value = "
-	param11.ParameterName = "p_itipobaremobr"
+                param11.Value = ""
+                param11.ParameterName = "p_itipobaremobr"
 	
 	Dim param12 As New SqlClient.SqlParameter
 	param12.SqlDbType = SqlDbType.varchar
 	param12.Size = 50
-	param12.Value = "
+	param12.Value = ""
 	param12.ParameterName = "p_itamapiezbaremobr"
 	
 	Dim param13 As New SqlClient.SqlParameter
 	param13.SqlDbType = SqlDbType.varchar
 	param13.Size = 50
-	param13.Value = "
-	param13.ParameterName = "p_imaterpiezbaremobr"
+                param13.Value = ""
+                param13.ParameterName = "p_imaterpiezbaremobr"
 	
 	Dim param14 As New SqlClient.SqlParameter
 	param14.SqlDbType = SqlDbType.decimal
@@ -775,14 +775,14 @@ Public Class aipbaremobrController
 	Dim param15 As New SqlClient.SqlParameter
 	param15.SqlDbType = SqlDbType.varchar
 	param15.Size = 500
-	param15.Value = "
+	param15.Value = ""
 	param15.ParameterName = "p_xdescbaremobr"
 	
 	Dim param16 As New SqlClient.SqlParameter
 	param16.SqlDbType = SqlDbType.varchar
 	param16.Size = 20
-	param16.Value = "
-	param16.ParameterName = "p_iestatbaremobr"
+                param16.Value = ""
+                param16.ParameterName = "p_iestatbaremobr"
 	
 	Dim param17 As New SqlClient.SqlParameter
 	param17.SqlDbType = SqlDbType.decimal

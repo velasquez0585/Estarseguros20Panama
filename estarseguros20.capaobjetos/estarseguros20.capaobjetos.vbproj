@@ -189,6 +189,7 @@
     <Compile Include="modelo\personalizados\DownloadFilesResult.vb" />
     <Compile Include="modelo\personalizados\DownloadFilesResultInsFoto.vb" />
     <Compile Include="modelo\personalizados\eventos.vb" />
+    <Compile Include="modelo\personalizados\inspriesgo.vb" />
     <Compile Include="modelo\personalizados\paginacion.vb" />
     <Compile Include="modelo\personalizados\peraipdatosdeclara.vb" />
     <Compile Include="modelo\personalizados\persaipinssini.vb" />

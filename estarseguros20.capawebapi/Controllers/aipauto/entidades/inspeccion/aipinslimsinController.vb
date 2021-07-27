@@ -800,8 +800,8 @@ Public Class aipinslimsinController
 	Dim param13 As New SqlClient.SqlParameter
 	param13.SqlDbType = SqlDbType.varchar
 	param13.Size = 100
-	param13.Value = "
-	param13.ParameterName = "p_xnomaseginslimsin"
+                param13.Value = ""
+                param13.ParameterName = "p_xnomaseginslimsin"
 	
 	Dim param14 As New SqlClient.SqlParameter
 	param14.SqlDbType = SqlDbType.decimal
@@ -813,7 +813,7 @@ Public Class aipinslimsinController
 	Dim param15 As New SqlClient.SqlParameter
 	param15.SqlDbType = SqlDbType.varchar
 	param15.Size = 100
-	param15.Value = "
+	param15.Value = ""
 	param15.ParameterName = "p_xsucuinslimsin"
 	
 	Dim param16 As New SqlClient.SqlParameter
@@ -824,13 +824,13 @@ Public Class aipinslimsinController
 	Dim param17 As New SqlClient.SqlParameter
 	param17.SqlDbType = SqlDbType.varchar
 	param17.Size = 500
-	param17.Value = "
+	param17.Value = ""
 	param17.ParameterName = "p_xdescinslimsin"
 	
 	Dim param18 As New SqlClient.SqlParameter
 	param18.SqlDbType = SqlDbType.varchar
 	param18.Size = 20
-	param18.Value = "
+	param18.Value = ""
 	param18.ParameterName = "p_iestatinslimsin"
 	
 	Dim param19 As New SqlClient.SqlParameter
