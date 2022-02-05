@@ -662,8 +662,8 @@ Public Class aipbarerepuController
 	Dim param11 As New SqlClient.SqlParameter
 	param11.SqlDbType = SqlDbType.varchar
 	param11.Size = 20
-                param11.Value = ""
-                param11.ParameterName = "p_iorigbarerepu"
+	param11.Value = "
+	param11.ParameterName = "p_iorigbarerepu"
 	
 	Dim param12 As New SqlClient.SqlParameter
 	param12.SqlDbType = SqlDbType.decimal
@@ -675,14 +675,14 @@ Public Class aipbarerepuController
 	Dim param13 As New SqlClient.SqlParameter
 	param13.SqlDbType = SqlDbType.varchar
 	param13.Size = 500
-	param13.Value = ""
+	param13.Value = "
 	param13.ParameterName = "p_xdescbarerepu"
 	
 	Dim param14 As New SqlClient.SqlParameter
 	param14.SqlDbType = SqlDbType.varchar
 	param14.Size = 20
-                param14.Value = ""
-                param14.ParameterName = "p_iestatbarerepu"
+	param14.Value = "
+	param14.ParameterName = "p_iestatbarerepu"
 	
 	Dim param15 As New SqlClient.SqlParameter
 	param15.SqlDbType = SqlDbType.decimal

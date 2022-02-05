@@ -1691,9 +1691,10 @@ Namespace aipauto.entidades.controlador
         <HttpPost()> _
         Public Function iexistexidaipinssusConExclusion(idaipinssus As Decimal, lista_idaipmanrepu As List(Of Decimal)) As Boolean
 
-            Dim iexiste As Boolean = (From p In _db.aipinssusrepuest
-            Where p.idaipinssus = idaipinssus And p.inoapliinssusrepuest = True And Not lista_idaipmanrepu.Contains(p.idaipmanrepu)
-                                            Select p).Any()
+            Dim iexiste As Boolean = False
+            '    (From p In _db.aipinssusrepuest
+            'Where p.idaipinssus = idaipinssus And p.inoapliinssusrepuest = True And Not lista_idaipmanrepu.Contains(p.idaipmanrepu)
+            '                                Select p).Any()
             Return iexiste
         End Function
 

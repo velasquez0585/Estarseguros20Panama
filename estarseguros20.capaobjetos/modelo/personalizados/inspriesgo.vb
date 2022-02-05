@@ -20,6 +20,9 @@
         Private p_kilometraje As String
         Private p_anio As String
         Private p_usuarioApp As String
+        Private p_producto As String
+        Private p_transmision As String
+        Private p_numeroPuestos As String
 
 
 
@@ -185,7 +188,32 @@
             End Set
         End Property
 
+        Public Property producto() As String
+            Get
+                Return Me.p_producto
+            End Get
+            Set(ByVal Value As String)
+                Me.p_producto = Value
+            End Set
+        End Property
 
+        Public Property transmision() As String
+            Get
+                Return Me.p_transmision
+            End Get
+            Set(ByVal Value As String)
+                Me.p_transmision = Value
+            End Set
+        End Property
+
+        Public Property numeroPuestos() As String
+            Get
+                Return Me.p_numeroPuestos
+            End Get
+            Set(ByVal Value As String)
+                Me.p_numeroPuestos = Value
+            End Set
+        End Property
 
     End Class
 End Namespace

@@ -792,7 +792,7 @@ Public Class aipinsajussinController
 	Dim param13 As New SqlClient.SqlParameter
 	param13.SqlDbType = SqlDbType.varchar
 	param13.Size = 100
-	param13.Value = ""
+	param13.Value = "
 	param13.ParameterName = "p_xnomaseginsajussin"
 	
 	Dim param14 As New SqlClient.SqlParameter
@@ -805,8 +805,8 @@ Public Class aipinsajussinController
 	Dim param15 As New SqlClient.SqlParameter
 	param15.SqlDbType = SqlDbType.varchar
 	param15.Size = 100
-                param15.Value = ""
-                param15.ParameterName = "p_xsucuinsajussin"
+	param15.Value = "
+	param15.ParameterName = "p_xsucuinsajussin"
 	
 	Dim param16 As New SqlClient.SqlParameter
 	param16.SqlDbType = SqlDbType.int
@@ -816,14 +816,14 @@ Public Class aipinsajussinController
 	Dim param17 As New SqlClient.SqlParameter
 	param17.SqlDbType = SqlDbType.varchar
 	param17.Size = 500
-	param17.Value = ""
+	param17.Value = "
 	param17.ParameterName = "p_xdescinsajussin"
 	
 	Dim param18 As New SqlClient.SqlParameter
 	param18.SqlDbType = SqlDbType.varchar
 	param18.Size = 20
-                param18.Value = ""
-                param18.ParameterName = "p_iestatinsajussin"
+	param18.Value = "
+	param18.ParameterName = "p_iestatinsajussin"
 	
 	Dim param19 As New SqlClient.SqlParameter
 	param19.SqlDbType = SqlDbType.decimal
